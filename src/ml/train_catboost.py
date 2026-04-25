@@ -1,4 +1,5 @@
 from pathlib import Path
+import argparse
 import json
 import pandas as pd
 
@@ -7,12 +8,22 @@ from split_data import split_by_time
 
 
 PATCH = 60
-ACTION = "pick"
 
 BASE = Path(f"data/patch_{PATCH}")
 ML_DIR = BASE / "ml"
 MODEL_DIR = Path(f"models/patch_{PATCH}")
 MODEL_DIR.mkdir(parents=True, exist_ok=True)
+
+
+def parse_args():
+    parser = argparse.ArgumentParser(description="Train CatBoost model for draft candidates.")
+    parser.add_argument(
+        "--action",
+        choices=["pick", "ban"],
+        default="pick",
+        help="Draft action to train: pick or ban.",
+    )
+    return parser.parse_args()
 
 
 def train_model(action):
@@ -65,11 +76,6 @@ def train_model(action):
     ]
 
     for col in cat_features:
-        train[col] = train[col].astype(str)
-        valid[col] = valid[col].astype(str)
-        test[col] = test[col].astype(str)
-    
-    for col in ["acting_team_id", "opponent_team_id", "league_name"]:
         train[col] = train[col].fillna("unknown").astype(str)
         valid[col] = valid[col].fillna("unknown").astype(str)
         test[col] = test[col].fillna("unknown").astype(str)
@@ -108,4 +114,5 @@ def train_model(action):
 
 
 if __name__ == "__main__":
-    train_model(ACTION)
+    args = parse_args()
+    train_model(args.action)

@@ -1,46 +1,26 @@
-# Virtual environments
 .venv/
 venv/
 env/
 
-# Python cache
 __pycache__/
 *.pyc
-*.pyo
-*.pyd
-
-# Jupyter
 .ipynb_checkpoints/
 
-# IDE / OS
 .idea/
 .DS_Store
 Thumbs.db
 
-# Raw data
-data/patch_*/matches/
+catboost_info/
+*.log
+*.tmp
+.env
+
 *.json
-
-# Large tables
 *.parquet
-
-# Models
 *.cbm
 *.pkl
 *.joblib
 
-# CatBoost
-catboost_info/
-
-# Logs and temp
-*.log
-*.tmp
-
-# Secrets
-.env
-
-# Pictures
-pictures
-
-# test
+models/
+pictures/
 test.ipynb

@@ -5,6 +5,7 @@ import pandas as pd
 PATCH = 60
 BASE = Path(f"data/patch_{PATCH}")
 ML_DIR = BASE / "ml"
+HEROES_PATH = Path("data/heroes.csv")
 
 
 def main():
@@ -57,6 +58,17 @@ def main():
 
     candidates = pd.DataFrame(rows)
     candidates = candidates.merge(heroes_stats, on="candidate_hero_id", how="left")
+
+    heroes = pd.read_csv(HEROES_PATH)[["id", "name"]].rename(columns={
+        "id": "candidate_hero_id",
+        "name": "candidate_hero_name_full",
+    })
+
+    candidates = candidates.merge(heroes, on="candidate_hero_id", how="left")
+    candidates["candidate_hero_name"] = candidates["candidate_hero_name"].fillna(
+        candidates["candidate_hero_name_full"]
+    )
+    candidates = candidates.drop(columns=["candidate_hero_name_full"])
 
     candidates["candidate_matches_played"] = candidates["candidate_matches_played"].fillna(0)
     candidates["candidate_pick_rate"] = candidates["candidate_pick_rate"].fillna(0)

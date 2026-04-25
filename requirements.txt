@@ -1,0 +1,11 @@
+pandas
+numpy
+pyarrow
+scipy
+matplotlib
+seaborn
+streamlit
+scikit-learn
+catboost
+category_encoders
+tqdm

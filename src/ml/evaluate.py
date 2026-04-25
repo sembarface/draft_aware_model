@@ -1,4 +1,5 @@
 from pathlib import Path
+import argparse
 import json
 import pandas as pd
 
@@ -6,11 +7,21 @@ from catboost import CatBoostClassifier, Pool
 
 
 PATCH = 60
-ACTION = "pick"
 
 BASE = Path(f"data/patch_{PATCH}")
 ML_DIR = BASE / "ml"
 MODEL_DIR = Path(f"models/patch_{PATCH}")
+
+
+def parse_args():
+    parser = argparse.ArgumentParser(description="Evaluate CatBoost draft ranking model.")
+    parser.add_argument(
+        "--action",
+        choices=["pick", "ban"],
+        default="pick",
+        help="Draft action to evaluate: pick or ban.",
+    )
+    return parser.parse_args()
 
 
 def ranking_metrics(df):
@@ -49,7 +60,7 @@ def evaluate(action):
     test = pd.read_parquet(ML_DIR / f"{action}_test.parquet")
 
     for col in cat_features:
-        test[col] = test[col].astype(str)
+        test[col] = test[col].fillna("unknown").astype(str)
 
     model = CatBoostClassifier()
     model.load_model(MODEL_DIR / f"{action}_model.cbm")
@@ -68,4 +79,5 @@ def evaluate(action):
 
 
 if __name__ == "__main__":
-    evaluate(ACTION)
+    args = parse_args()
+    evaluate(args.action)
