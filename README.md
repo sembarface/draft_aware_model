@@ -29,6 +29,19 @@
 
 Большие данные, parquet-файлы, JSON-дампы, обученные модели и локальные артефакты хранятся только локально и не должны попадать в Git. Небольшой справочник `data/heroes.csv` можно хранить в репозитории.
 
+## Data schema
+
+
+
+The repository contains schema documentation:
+
+- `docs/data_schema/parquet_tables.md`
+- `docs/data_schema/raw_match_json_structure.md`
+- `docs/data_schema/data_pipeline.md`
+- `project_status.md`
+- `reports/notebook_report.md`
+
+
 ## Текущий статус
 
 Для `patch_60` уже построены:
