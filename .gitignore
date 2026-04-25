@@ -40,5 +40,5 @@ catboost_info/
 # Optional local configs
 .env
 
-
+test.ipynb
 pictures
