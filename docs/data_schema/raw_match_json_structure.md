@@ -5,7 +5,12 @@
 ```text
 data/patch_60/matches/
 ```
-Ниже описаны только поля, которые реально используются текущим проектом.
+
+Они не коммитятся в GitHub. Ниже описаны только поля, которые реально используются текущим проектом.
+
+Патч задается централизованно в `src/config.py`. OpenDota Explorer SQL использует patch label, например `7.41`, а raw JSON содержит числовой patch id, например `60`. Соответствие хранится в `PATCH_MAP`.
+
+Основной список команд - ручной `TEAM_IDS` из `src/config.py`. Парсер фильтрует матчи по `matches.radiant_team_id` / `matches.dire_team_id`, а не по `notable_players.team_id`, чтобы матч попадал в выборку по реальной команде матча.
 
 ## 1. Top-level fields
 
@@ -23,6 +28,11 @@ data/patch_60/matches/
 | `dire_team_id` | ID команды Dire | `matches.parquet`, `draft_events.parquet` |
 | `dire_name` / `dire_team_name` | Название команды Dire | `matches.parquet`, `draft_events.parquet` |
 | `league.name` | Название лиги | `matches.parquet`, ML features |
+| `leagueid` | ID лиги | `matches.parquet` |
+| `series_id` | ID серии | `matches.parquet` |
+| `series_type` | Тип серии | `matches.parquet` |
+| `game_mode` | Игровой режим | `matches.parquet` |
+| `lobby_type` | Тип лобби | `matches.parquet` |
 | `players` | Список игроков матча | `players.parquet`, составы команд в `matches.parquet`, `heroes_stats.parquet` |
 | `picks_bans` | Список действий драфта | `picks_bans.parquet`, `draft_events.parquet` |
 | `draft_timings` | Тайминги действий драфта | `picks_bans.parquet`, поле `total_time_taken` |
@@ -71,3 +81,5 @@ data/patch_60/matches/
 | `total_time_taken` | Время, затраченное на действие | `picks_bans.parquet` |
 
 В текущем `patch_60` поле `total_time_taken` может отсутствовать или быть полностью пустым, поэтому оно не используется как основной признак модели.
+
+При конвертации `players.parquet` дополнительно получает поля `is_radiant`, `side`, `team_id`, `team_name`, `win`. Они нужны для будущих team-specific и player x hero признаков, но post-match поля вроде `win`, `kills`, `gpm`, `xpm`, `net_worth` не должны напрямую использоваться как draft-features.

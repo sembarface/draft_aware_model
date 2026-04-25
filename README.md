@@ -16,6 +16,28 @@
 4. `src/ml/train_catboost.py` - обучение CatBoost-модели для выбранного действия.
 5. `src/ml/evaluate.py` - расчет ranking-метрик на тестовой части.
 
+## Запуск
+
+Обновить локальные данные, сконвертировать parquet и построить ML-таблицы:
+
+```bash
+python -m src.data_update --patch-label 7.41 --fetch --convert --build-ml
+```
+
+Запустить baseline pipeline:
+
+```bash
+python -m src.ml.run_pipeline --patch-label 7.41 --dataset base
+```
+
+Запустить pipeline с interaction features:
+
+```bash
+python -m src.ml.run_pipeline --patch-label 7.41 --dataset interactions
+```
+
+Патч задается через `--patch-label`; соответствие между OpenDota patch label (`7.41`) и JSON patch id (`60`) хранится в `src/config.py`.
+
 ## Структура проекта
 
 - `src/ml/` - скрипты построения датасетов, обучения и оценки.
@@ -31,9 +53,9 @@
 
 ## Data schema
 
+Raw JSON files, parquet tables and trained models are not stored in the repository.
 
-
-The repository contains schema documentation:
+Instead, the repository contains schema documentation:
 
 - `docs/data_schema/parquet_tables.md`
 - `docs/data_schema/raw_match_json_structure.md`
@@ -41,6 +63,7 @@ The repository contains schema documentation:
 - `project_status.md`
 - `reports/notebook_report.md`
 
+Цель - сделать репозиторий легким и понятным без загрузки больших данных.
 
 ## Текущий статус
 

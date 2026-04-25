@@ -9,3 +9,4 @@ scikit-learn
 catboost
 category_encoders
 tqdm
+requests

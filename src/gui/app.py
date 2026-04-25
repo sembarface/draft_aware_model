@@ -49,5 +49,5 @@ elif SECTION == "3.2 Корреляционный анализ":
     show_correlations(players)
 
 elif SECTION == "3.3 Синергия и контрпики героев":
-    show_hero_interactions(matches, heroes_stats, picks)
+    show_hero_interactions(matches, heroes_stats, picks, patch_num=PATCH)
 

@@ -1,6 +1,8 @@
 # Parquet tables
 
-Этот документ описывает структуру основных parquet-таблиц проекта.
+Сами parquet-файлы не хранятся в GitHub из-за размера и потому что они являются локальными артефактами пайплайна. Этот документ описывает структуру основных parquet-таблиц проекта.
+
+Патчи централизованы в `src/config.py`: OpenDota SQL использует patch label, например `7.41`, а JSON матча использует patch id, например `60`. Соответствие хранится в `PATCH_MAP`.
 
 ## Raw Tables
 
@@ -10,7 +12,7 @@
 
 **Одна строка:** один матч.
 
-**Текущий размер:** `(345, 22)`.
+**Текущий размер:** `(345, 22)` в `project_status.md` до добавления новых служебных полей. После пересборки таблица также содержит `league_id`, `series_id`, `series_type`, `game_mode`, `lobby_type`.
 
 **Ключевые поля:** `match_id`, `start_time`, `patch`, `radiant_team_id`, `dire_team_id`, `league_name`.
 
@@ -27,7 +29,12 @@
 | `radiant_team_name` | Название команды Radiant | string/null |
 | `dire_team_id` | ID команды Dire | integer/null |
 | `dire_team_name` | Название команды Dire | string/null |
+| `league_id` | ID лиги OpenDota | integer/null |
 | `league_name` | Название лиги | string |
+| `series_id` | ID серии | integer/null |
+| `series_type` | Тип серии | integer/null |
+| `game_mode` | Игровой режим OpenDota | integer/null |
+| `lobby_type` | Тип лобби OpenDota | integer/null |
 | `radiant_hero_1` | Герой Radiant 1 | integer hero_id |
 | `dire_hero_1` | Герой Dire 1 | integer hero_id |
 | `radiant_hero_2` | Герой Radiant 2 | integer hero_id |
@@ -45,7 +52,7 @@
 
 **Одна строка:** один игрок в конкретном матче.
 
-**Текущий размер:** `(3450, 20)`.
+**Текущий размер:** `(3450, 20)` в `project_status.md` до добавления новых team/player context полей. После пересборки таблица также содержит `is_radiant`, `side`, `team_id`, `team_name`, `win`.
 
 **Ключевые поля:** `match_id`, `account_id`, `player_slot`, `hero_id`.
 
@@ -55,6 +62,11 @@
 | `account_id` | ID аккаунта игрока | integer |
 | `nickname` | Никнейм игрока | string/null |
 | `player_slot` | Слот игрока, определяет сторону | integer |
+| `is_radiant` | Игрок на стороне Radiant | boolean |
+| `side` | Сторона игрока: `radiant` или `dire` | string |
+| `team_id` | ID команды игрока | integer/null |
+| `team_name` | Название команды игрока | string/null |
+| `win` | Победила ли команда игрока | boolean |
 | `hero_id` | ID героя | integer |
 | `hero_name` | Название героя | string |
 | `kills` | Убийства | integer |
@@ -273,3 +285,82 @@
 | `candidate_pick_rate` | Pick rate героя в датасете | float |
 | `candidate_ban_rate` | Ban rate героя в датасете | float |
 | `candidate_pick_or_ban_rate` | Pick-or-ban rate героя в датасете | float |
+
+### hero_synergy.parquet
+
+**Назначение:** таблица парных синергий героев, построенная отдельно от Streamlit GUI.
+
+**Одна строка:** unordered пара героев в одной команде.
+
+**Ключевые поля:** `hero1_id`, `hero2_id`.
+
+Для строгой финальной ML-методологии такие агрегаты нужно считать только на train-части или в rolling/as-of режиме, чтобы избежать leakage.
+
+| column | meaning | type/expected type |
+|---|---|---|
+| `hero1_id` | ID первого героя пары | integer |
+| `hero2_id` | ID второго героя пары | integer |
+| `games` | Количество совместных игр | integer |
+| `wins` | Количество побед пары | integer |
+| `pair_winrate` | Winrate пары | float |
+| `hero1_wr` | Общий winrate первого героя | float |
+| `hero2_wr` | Общий winrate второго героя | float |
+| `baseline_winrate` | Средний baseline winrate двух героев | float |
+| `synergy_delta` | `pair_winrate - baseline_winrate` | float |
+| `delta_hero1` | `pair_winrate - hero1_wr`, EDA поле | float |
+| `delta_hero2` | `pair_winrate - hero2_wr`, EDA поле | float |
+| `pair_pick_freq` | Частота совместного появления пары | float |
+| `p_value` | p-value биномиального теста | float/null |
+| `significant` | `p_value < alpha` | boolean |
+| `hero1_name` | Название первого героя | string |
+| `hero2_name` | Название второго героя | string |
+
+### hero_matchups.parquet
+
+**Назначение:** таблица направленных matchup/counter статистик.
+
+**Одна строка:** направленная пара `hero_id` против `vs_hero_id`.
+
+**Ключевые поля:** `hero_id`, `vs_hero_id`.
+
+| column | meaning | type/expected type |
+|---|---|---|
+| `hero_id` | ID героя | integer |
+| `vs_hero_id` | ID героя-соперника | integer |
+| `games` | Количество игр matchup | integer |
+| `wins` | Победы `hero_id` против `vs_hero_id` | integer |
+| `matchup_winrate` | Winrate в matchup | float |
+| `hero_winrate` | Общий winrate героя | float |
+| `counter_delta` | `matchup_winrate - hero_winrate` | float |
+| `p_value_win` | p-value биномиального теста | float/null |
+| `significant_win` | `p_value_win < alpha` | boolean |
+| `hero_name` | Название героя | string |
+| `vs_hero_name` | Название героя-соперника | string |
+
+### hero_conditional_bans.parquet
+
+**Назначение:** направленная аналитическая таблица условных банов.
+
+**Одна строка:** пара `picked_hero_id` и `banned_hero_id`.
+
+**Ключевые поля:** `picked_hero_id`, `banned_hero_id`.
+
+| column | meaning | type/expected type |
+|---|---|---|
+| `picked_hero_id` | ID пикнутого героя | integer |
+| `banned_hero_id` | ID забаненного героя | integer |
+| `picked_games` | Число матчей, где герой был пикнут | integer |
+| `bans_by_picked_team` | Сколько раз бан сделала команда пикнутого героя | integer |
+| `bans_by_opponent_team` | Сколько раз бан сделал соперник | integer |
+| `ban_rate_by_picked_team` | Условная частота бана своей командой | float |
+| `ban_rate_by_opponent_team` | Условная частота бана соперником | float |
+| `picked_hero_name` | Название пикнутого героя | string |
+| `banned_hero_name` | Название забаненного героя | string |
+
+### draft_candidates_pick_interactions.parquet / draft_candidates_ban_interactions.parquet
+
+**Назначение:** расширенные candidate tables с interaction features.
+
+**Одна строка:** тот же кандидат, что и в base candidate table, плюс агрегаты синергий и контрпиков относительно `draft_states`.
+
+Эти таблицы строятся скриптом `src/ml/add_interaction_features.py` и пока не заменяют baseline автоматически; обучение выбирает вариант через `--dataset base` или `--dataset interactions`.
