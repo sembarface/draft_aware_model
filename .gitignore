@@ -12,33 +12,35 @@ __pycache__/
 # Jupyter
 .ipynb_checkpoints/
 
-# OS / IDE
+# IDE / OS
+.idea/
 .DS_Store
 Thumbs.db
-.vscode/
-.idea/
 
-# Raw OpenDota JSON matches
+# Raw data
 data/patch_*/matches/
 *.json
 
-# Large analytical tables
+# Large tables
 *.parquet
 
-# ML models
+# Models
 *.cbm
 *.pkl
 *.joblib
 
-# Temporary files
-*.tmp
-*.log
-
-# CatBoost temporary files
+# CatBoost
 catboost_info/
 
-# Optional local configs
+# Logs and temp
+*.log
+*.tmp
+
+# Secrets
 .env
 
-test.ipynb
+# Pictures
 pictures
+
+# test
+test.ipynb
