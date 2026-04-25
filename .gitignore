@@ -1,0 +1,44 @@
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Raw OpenDota JSON matches
+data/patch_*/matches/
+*.json
+
+# Large analytical tables
+*.parquet
+
+# ML models
+*.cbm
+*.pkl
+*.joblib
+
+# Temporary files
+*.tmp
+*.log
+
+# CatBoost temporary files
+catboost_info/
+
+# Optional local configs
+.env
+
+
+pictures
