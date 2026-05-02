@@ -168,6 +168,12 @@ def process_match_json(match_obj, heroes_map):
             "hero_damage": player.get("hero_damage"),
             "tower_damage": player.get("tower_damage"),
             "hero_healing": player.get("hero_healing"),
+            "obs_placed": player.get("obs_placed"),
+            "sen_placed": player.get("sen_placed"),
+            "stuns": player.get("stuns"),
+            "camps_stacked": player.get("camps_stacked"),
+            "rune_pickups": player.get("rune_pickups"),
+            "firstblood_claimed": player.get("firstblood_claimed"),
         })
 
     picks_rows = []

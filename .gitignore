@@ -26,3 +26,7 @@ data/patch_*/parser_log_patch_*.csv
 models/
 pictures/
 test.ipynb
+
+!reports/
+!reports/ml/
+!reports/ml/**

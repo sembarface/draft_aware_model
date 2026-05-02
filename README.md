@@ -1,5 +1,17 @@
 # draft_aware_model
 
+## ML artifacts
+
+Trained `.cbm` models are stored under `models/patch_*`.
+
+Commit-friendly ML reports are stored under `reports/ml/patch_*`:
+
+- `metrics/` for `*_metrics.json`, comparisons and metric tables.
+- `features/` for `*_features.json`.
+- `importance/` for feature-importance exports.
+- `errors/` for error-analysis reports.
+- `recommendations/` for recommendation explanations.
+
 Курсовой ML-проект по поддержке принятия решений на стадии драфта Dota 2.
 
 Цель проекта - построить модель, которая для каждого состояния драфта ранжирует доступных героев-кандидатов отдельно для действий `pick` и `ban`.

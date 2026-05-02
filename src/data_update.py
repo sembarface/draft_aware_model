@@ -7,6 +7,7 @@ from src.convert_to_parquet import run_conversion
 from src.ml.build_draft_candidates import build_draft_candidates
 from src.ml.build_draft_events import build_draft_events
 from src.ml.build_draft_states import build_draft_states
+from src.ml.build_player_stats import build_player_stats
 from src.parser_explorer import run_parser
 
 
@@ -48,6 +49,8 @@ def print_summary(patch_label, include_ml=False):
         print(f"draft_states.parquet: {_shape(ml_dir / 'draft_states.parquet')}")
         print(f"draft_candidates_pick.parquet: {_shape(ml_dir / 'draft_candidates_pick.parquet')}")
         print(f"draft_candidates_ban.parquet: {_shape(ml_dir / 'draft_candidates_ban.parquet')}")
+        print(f"player_stats.parquet: {_shape(base_dir / 'player_stats.parquet')}")
+        print(f"player_hero_stats.parquet: {_shape(base_dir / 'player_hero_stats.parquet')}")
 
 
 def run_data_update(
@@ -76,6 +79,7 @@ def run_data_update(
     if build_ml:
         build_draft_events(patch_label)
         build_draft_states(patch_label)
+        build_player_stats(patch_label, all_patches=False, alltime=False)
         build_draft_candidates(patch_label)
 
     print_summary(patch_label, include_ml=build_ml)
