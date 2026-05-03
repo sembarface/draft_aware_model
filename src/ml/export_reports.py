@@ -75,29 +75,32 @@ def _write_comparison(report_dirs, metrics_df):
         return
     rows = []
     for action in ["pick", "ban"]:
-        base = metrics_df[(metrics_df["action"] == action) & (metrics_df["dataset"] == "base")]
-        players = metrics_df[(metrics_df["action"] == action) & (metrics_df["dataset"] == "players")]
-        if base.empty or players.empty:
-            continue
-        base = base.iloc[0]
-        players = players.iloc[0]
-        for metric in METRICS:
-            if metric == "states":
+        pairs = [("base", "players"), ("players", "players_smooth")]
+        for left_name, right_name in pairs:
+            left = metrics_df[(metrics_df["action"] == action) & (metrics_df["dataset"] == left_name)]
+            right = metrics_df[(metrics_df["action"] == action) & (metrics_df["dataset"] == right_name)]
+            if left.empty or right.empty:
                 continue
-            rows.append({
-                "action": action,
-                "metric": metric,
-                "base": base.get(metric),
-                "players": players.get(metric),
-                "diff": players.get(metric) - base.get(metric),
-            })
+            left = left.iloc[0]
+            right = right.iloc[0]
+            for metric in METRICS:
+                if metric == "states":
+                    continue
+                rows.append({
+                    "action": action,
+                    "comparison": f"{left_name}_vs_{right_name}",
+                    "metric": metric,
+                    left_name: left.get(metric),
+                    right_name: right.get(metric),
+                    "diff": right.get(metric) - left.get(metric),
+                })
     if not rows:
         return
     df = pd.DataFrame(rows)
     csv_path = report_dirs["metrics"] / "model_comparison.csv"
     md_path = report_dirs["metrics"] / "model_comparison.md"
     df.to_csv(csv_path, index=False)
-    md_path.write_text("# Model comparison: base vs players\n\n" + _to_markdown(df), encoding="utf-8")
+    md_path.write_text("# Model comparison\n\n" + _to_markdown(df), encoding="utf-8")
     print(f"saved: {csv_path}")
     print(f"saved: {md_path}")
 

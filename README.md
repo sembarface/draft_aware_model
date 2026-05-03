@@ -12,6 +12,8 @@ Commit-friendly ML reports are stored under `reports/ml/patch_*`:
 - `errors/` for error-analysis reports.
 - `recommendations/` for recommendation explanations.
 
+Active datasets: `base`, `interactions`, `players`, `players_smooth`.
+
 Курсовой ML-проект по поддержке принятия решений на стадии драфта Dota 2.
 
 Цель проекта - построить модель, которая для каждого состояния драфта ранжирует доступных героев-кандидатов отдельно для действий `pick` и `ban`.

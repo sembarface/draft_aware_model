@@ -26,9 +26,9 @@ def run_pipeline(patch_label=PATCH_LABEL, dataset="base", skip_train=False):
     build_player_stats(patch_label, all_patches=True, alltime=True)
     build_draft_candidates(patch_label)
 
-    if dataset in {"interactions", "players"}:
+    if dataset in {"interactions", "players", "players_smooth"}:
         add_interaction_features(patch_label)
-    if dataset == "players":
+    if dataset in {"players", "players_smooth"}:
         add_player_features(patch_label)
 
     if skip_train:
