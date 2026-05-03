@@ -353,7 +353,7 @@ def main():
 
     with st.sidebar:
         patch_label = st.selectbox("Patch", [PATCH_LABEL], index=0)
-        dataset = st.selectbox("Dataset", ["players", "players_smooth", "interactions", "base"], index=0)
+        dataset = st.selectbox("Dataset", ["players", "interactions", "base"], index=0)
         teams = load_teams(patch_label)
         if teams.empty:
             st.error("No teams found. Build matches.parquet first.")

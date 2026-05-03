@@ -2,6 +2,8 @@ import argparse
 from pathlib import Path
 
 
+OBSOLETE_PLAYER_EXPERIMENT = "players" + "_smooth"
+
 GENERATED_PATTERNS = [
     "data/patch_*/ml/*.parquet",
     "data/stats/**/*.parquet",
@@ -12,8 +14,10 @@ GENERATED_PATTERNS = [
     "models/patch_*/*_features.json",
     "models/patch_*/*_metrics.json",
     "models/patch_*/*_feature_importance.csv",
+    f"models/patch_*/*{OBSOLETE_PLAYER_EXPERIMENT}*",
     "models/patch_*/*.csv",
     "models/patch_*/*.md",
+    f"reports/ml/patch_*/**/*{OBSOLETE_PLAYER_EXPERIMENT}*",
     "reports/metrics/patch_*/*",
     "reports/errors/patch_*/*",
     "reports/recommendations/patch_*/*",

@@ -75,7 +75,7 @@ def _write_comparison(report_dirs, metrics_df):
         return
     rows = []
     for action in ["pick", "ban"]:
-        pairs = [("base", "players"), ("players", "players_smooth")]
+        pairs = [("base", "players"), ("interactions", "players")]
         for left_name, right_name in pairs:
             left = metrics_df[(metrics_df["action"] == action) & (metrics_df["dataset"] == left_name)]
             right = metrics_df[(metrics_df["action"] == action) & (metrics_df["dataset"] == right_name)]
@@ -90,8 +90,8 @@ def _write_comparison(report_dirs, metrics_df):
                     "action": action,
                     "comparison": f"{left_name}_vs_{right_name}",
                     "metric": metric,
-                    left_name: left.get(metric),
-                    right_name: right.get(metric),
+                    "left": left.get(metric),
+                    "right": right.get(metric),
                     "diff": right.get(metric) - left.get(metric),
                 })
     if not rows:

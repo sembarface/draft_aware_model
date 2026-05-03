@@ -7,7 +7,7 @@ import streamlit as st
 from catboost import CatBoostRanker, Pool
 
 from src.config import get_ml_report_dirs, get_patch_num, get_patch_paths
-from src.ui.explanations import explain_recommendation, explain_recommendation_markdown
+from src.ui.feature_builder import attach_explanations, build_recommendation_rows, prepare_model_frame
 
 
 HEROES_PATH = Path("data/heroes.csv")
@@ -15,15 +15,6 @@ HEROES_PATH = Path("data/heroes.csv")
 
 def _other_side(side):
     return "dire" if side == "radiant" else "radiant"
-
-
-def _as_str_id(value):
-    if pd.isna(value):
-        return "unknown"
-    try:
-        return str(int(value))
-    except Exception:
-        return str(value)
 
 
 @st.cache_data(show_spinner=False)
@@ -298,55 +289,36 @@ def recommend(
     model = load_model(patch_label, dataset, action_type)
     ref = _reference_defaults(patch_label, action_type, dataset)
     ref_lookup = ref.set_index("candidate_hero_id").to_dict("index") if not ref.empty else {}
-    available = heroes[~heroes["hero_id"].isin(set(unavailable_heroes))].copy()
-    rows = []
-    patch_num = get_patch_num(patch_label)
     lookups = load_player_lookups(patch_label)
     own_roster = get_latest_team_roster(acting_team_id, patch_label)
     opponent_roster = get_latest_team_roster(opponent_team_id, patch_label)
 
-    for _, hero in available.iterrows():
-        hero_id = int(hero["hero_id"])
-        row = dict(ref_lookup.get(hero_id, {}))
-        row.update({
-            "order": order,
-            "draft_phase": draft_phase,
-            "action_type": action_type,
-            "acting_side": acting_side,
-            "acting_team_id": _as_str_id(acting_team_id),
-            "opponent_team_id": _as_str_id(opponent_team_id),
-            "patch": str(patch_num),
-            "league_name": "manual_ui",
-            "n_ally_picks_before": len(ally_picks_before),
-            "n_enemy_picks_before": len(enemy_picks_before),
-            "n_ally_bans_before": len(ally_bans_before),
-            "n_enemy_bans_before": len(enemy_bans_before),
-            "available_hero_count": len(available),
-            "candidate_hero_id": hero_id,
-            "candidate_hero_name": hero["hero_name"],
-            "acting_team_name": acting_team_name,
-            "opponent_team_name": opponent_team_name,
-        })
-        player_feature_values = _player_features_from_rosters(hero_id, own_roster, opponent_roster, lookups)
-        row.update(player_feature_values)
-        rows.append(row)
-
-    df = pd.DataFrame(rows)
-    for feature in features:
-        if feature not in df.columns:
-            df[feature] = "unknown" if feature in cat_features else 0
-    for feature in cat_features:
-        df[feature] = df[feature].fillna("unknown").astype(str)
-    for feature in [col for col in features if col not in cat_features]:
-        df[feature] = pd.to_numeric(df[feature], errors="coerce").fillna(0)
+    df = build_recommendation_rows(
+        heroes=heroes,
+        ref_lookup=ref_lookup,
+        unavailable_heroes=unavailable_heroes,
+        patch_label=patch_label,
+        action_type=action_type,
+        acting_team_id=acting_team_id,
+        opponent_team_id=opponent_team_id,
+        acting_team_name=acting_team_name,
+        opponent_team_name=opponent_team_name,
+        acting_side=acting_side,
+        order=order,
+        draft_phase=draft_phase,
+        ally_picks_before=ally_picks_before,
+        enemy_picks_before=enemy_picks_before,
+        ally_bans_before=ally_bans_before,
+        enemy_bans_before=enemy_bans_before,
+        player_feature_fn=lambda hero_id: _player_features_from_rosters(hero_id, own_roster, opponent_roster, lookups),
+    )
+    df = prepare_model_frame(df, features, cat_features)
 
     pool = Pool(df[features], cat_features=cat_features)
     df["score"] = model.predict(pool)
     df = df.sort_values("score", ascending=False).head(top_k).reset_index(drop=True)
     df["rank"] = df.index + 1
-    df["explanation"] = df.apply(lambda row: explain_recommendation(row, action_type), axis=1)
-    df["explanation_markdown"] = df.apply(lambda row: explain_recommendation_markdown(row, action_type), axis=1)
-    df["key_factors"] = df["explanation"]
+    df = attach_explanations(df, action_type)
     output_cols = [
         "rank",
         "candidate_hero_id",

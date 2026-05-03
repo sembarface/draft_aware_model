@@ -1,4 +1,4 @@
-DATASET_CHOICES = ["base", "interactions", "players", "players_smooth"]
+DATASET_CHOICES = ["base", "interactions", "players"]
 
 BASE_FEATURES = [
     "order",
@@ -90,65 +90,6 @@ PLAYER_FEATURES = [
     "opponent_roster_player_avg_kda_patch_mean",
 ]
 
-PLAYER_SMOOTH_FEATURES = [
-    "own_player_hero_log_games_alltime_max",
-    "own_player_hero_log_games_alltime_mean",
-    "own_player_hero_reliability_alltime_max",
-    "own_player_hero_reliability_alltime_mean",
-    "own_player_hero_winrate_alltime_smooth_max",
-    "own_player_hero_winrate_alltime_smooth_mean",
-    "own_player_hero_avg_kda_alltime_smooth_max",
-    "own_player_hero_avg_gold_per_min_alltime_smooth_max",
-    "own_player_hero_avg_xp_per_min_alltime_smooth_max",
-    "own_player_hero_avg_hero_damage_alltime_smooth_max",
-    "own_player_hero_avg_tower_damage_alltime_smooth_max",
-    "opponent_player_hero_log_games_alltime_max",
-    "opponent_player_hero_log_games_alltime_mean",
-    "opponent_player_hero_reliability_alltime_max",
-    "opponent_player_hero_reliability_alltime_mean",
-    "opponent_player_hero_winrate_alltime_smooth_max",
-    "opponent_player_hero_winrate_alltime_smooth_mean",
-    "opponent_player_hero_avg_kda_alltime_smooth_max",
-    "opponent_player_hero_avg_gold_per_min_alltime_smooth_max",
-    "opponent_player_hero_avg_xp_per_min_alltime_smooth_max",
-    "opponent_player_hero_avg_hero_damage_alltime_smooth_max",
-    "opponent_player_hero_avg_tower_damage_alltime_smooth_max",
-    "own_player_hero_log_games_patch_max",
-    "own_player_hero_log_games_patch_mean",
-    "own_player_hero_reliability_patch_max",
-    "own_player_hero_reliability_patch_mean",
-    "own_player_hero_winrate_patch_smooth_max",
-    "own_player_hero_winrate_patch_smooth_mean",
-    "own_player_hero_avg_kda_patch_smooth_max",
-    "own_player_hero_avg_gold_per_min_patch_smooth_max",
-    "own_player_hero_avg_xp_per_min_patch_smooth_max",
-    "opponent_player_hero_log_games_patch_max",
-    "opponent_player_hero_log_games_patch_mean",
-    "opponent_player_hero_reliability_patch_max",
-    "opponent_player_hero_reliability_patch_mean",
-    "opponent_player_hero_winrate_patch_smooth_max",
-    "opponent_player_hero_winrate_patch_smooth_mean",
-    "opponent_player_hero_avg_kda_patch_smooth_max",
-    "opponent_player_hero_avg_gold_per_min_patch_smooth_max",
-    "opponent_player_hero_avg_xp_per_min_patch_smooth_max",
-    "own_roster_player_matches_alltime_mean",
-    "own_roster_player_winrate_alltime_mean",
-    "own_roster_player_avg_kda_alltime_mean",
-    "own_roster_player_avg_gold_per_min_alltime_mean",
-    "own_roster_player_avg_xp_per_min_alltime_mean",
-    "opponent_roster_player_matches_alltime_mean",
-    "opponent_roster_player_winrate_alltime_mean",
-    "opponent_roster_player_avg_kda_alltime_mean",
-    "opponent_roster_player_avg_gold_per_min_alltime_mean",
-    "opponent_roster_player_avg_xp_per_min_alltime_mean",
-    "own_roster_player_matches_patch_mean",
-    "own_roster_player_winrate_patch_mean",
-    "own_roster_player_avg_kda_patch_mean",
-    "opponent_roster_player_matches_patch_mean",
-    "opponent_roster_player_winrate_patch_mean",
-    "opponent_roster_player_avg_kda_patch_mean",
-]
-
 CAT_FEATURES = [
     "action_type",
     "acting_side",
@@ -171,10 +112,8 @@ def dataset_path(ml_dir, action, dataset):
 
 def select_features(df, dataset):
     features = BASE_FEATURES.copy()
-    if dataset in {"interactions", "players", "players_smooth"}:
+    if dataset in {"interactions", "players"}:
         features.extend(INTERACTION_FEATURES)
     if dataset == "players":
         features.extend(PLAYER_FEATURES)
-    if dataset == "players_smooth":
-        features.extend(PLAYER_SMOOTH_FEATURES)
     return [col for col in features if col in df.columns]

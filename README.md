@@ -1,97 +1,129 @@
 # draft_aware_model
 
-## ML artifacts
+ML project for Dota 2 draft recommendations. The model ranks available hero candidates separately for `pick` and `ban` draft actions.
 
-Trained `.cbm` models are stored under `models/patch_*`.
+## Current Architecture
 
-Commit-friendly ML reports are stored under `reports/ml/patch_*`:
+The project keeps one compact ML pipeline:
 
-- `metrics/` for `*_metrics.json`, comparisons and metric tables.
-- `features/` for `*_features.json`.
-- `importance/` for feature-importance exports.
-- `errors/` for error-analysis reports.
-- `recommendations/` for recommendation explanations.
+```text
+raw patch parquet
+-> draft_events
+-> draft_states
+-> draft_candidates_{pick,ban}
+-> interactions
+-> players
+-> CatBoostRanker
+-> reports/ml
+-> local Streamlit UI
+```
 
-Active datasets: `base`, `interactions`, `players`, `players_smooth`.
+Current patch: `7.41` / `patch_60`.
 
-Run local draft UI:
+Active datasets:
+
+- `base`: draft state + candidate hero meta statistics.
+- `interactions`: `base` + hero synergy/counter features.
+- `players`: `interactions` + roster and player-hero comfort features.
+
+`players` is the main UI dataset.
+
+## Commands
+
+Build tables without training:
+
+```bash
+python -m src.ml.run_pipeline --patch-label 7.41 --dataset players --skip-train
+```
+
+Train and evaluate a ranker:
+
+```bash
+python -m src.ml.train_catboost --patch-label 7.41 --action pick --dataset players
+python -m src.ml.evaluate --patch-label 7.41 --action pick --dataset players
+
+python -m src.ml.train_catboost --patch-label 7.41 --action ban --dataset players
+python -m src.ml.evaluate --patch-label 7.41 --action ban --dataset players
+```
+
+Export report tables:
+
+```bash
+python -m src.ml.export_reports --patch-label 7.41
+```
+
+Run local UI:
 
 ```bash
 streamlit run src/ui/app.py
 ```
 
-Курсовой ML-проект по поддержке принятия решений на стадии драфта Dota 2.
-
-Цель проекта - построить модель, которая для каждого состояния драфта ранжирует доступных героев-кандидатов отдельно для действий `pick` и `ban`.
-
-## Текущий ML-пайплайн
-
-Пайплайн строится вокруг candidate table: одна строка соответствует одному доступному герою-кандидату в конкретном состоянии драфта.
-
-Основные шаги:
-
-1. `src/ml/build_draft_events.py` - сбор событий драфта из raw-таблиц.
-2. `src/ml/build_draft_states.py` - построение последовательных состояний драфта.
-3. `src/ml/build_draft_candidates.py` - построение candidate-таблиц для pick и ban.
-4. `src/ml/train_catboost.py` - обучение CatBoost-модели для выбранного действия.
-5. `src/ml/evaluate.py` - расчет ranking-метрик на тестовой части.
-
-## Запуск
-
-Обновить локальные данные, сконвертировать parquet и построить ML-таблицы:
+Download hero icons for local UI cache:
 
 ```bash
-python -m src.data_update --patch-label 7.41 --fetch --convert --build-ml
+python -m src.ui.download_hero_icons
 ```
 
-Запустить baseline pipeline:
+## Important Files
+
+- `src/config.py`: patch mapping and path helpers.
+- `src/ml/feature_sets.py`: single source of truth for datasets and model features.
+- `src/ml/build_draft_events.py`: build enriched draft events.
+- `src/ml/build_draft_states.py`: build sequential draft states.
+- `src/ml/build_draft_candidates.py`: build base candidate tables.
+- `src/ml/add_interaction_features.py`: add synergy/counter features.
+- `src/ml/add_player_features.py`: add player and player-hero features.
+- `src/ml/train_catboost.py`: train CatBoostRanker.
+- `src/ml/evaluate.py`: calculate ranking metrics.
+- `src/ui/app.py`: Streamlit UI.
+- `src/ui/feature_builder.py`: UI inference feature rows.
+- `src/ui/recommender.py`: model loading and scoring for UI.
+
+## Artifacts
+
+Generated data and models are local artifacts and should not be committed:
+
+- raw JSON;
+- parquet tables;
+- `.cbm` models;
+- local hero icons under `data/hero_icons/`.
+
+Commit-friendly ML outputs live in:
+
+```text
+reports/ml/patch_60/
+```
+
+Subdirectories:
+
+- `metrics/`
+- `features/`
+- `importance/`
+- `errors/`
+- `recommendations/`
+
+## Cleanup
+
+Dry-run:
 
 ```bash
-python -m src.ml.run_pipeline --patch-label 7.41 --dataset base
+python -m src.ml.cleanup_tables
 ```
 
-Запустить pipeline с interaction features:
+Apply deletion of generated artifacts:
 
 ```bash
-python -m src.ml.run_pipeline --patch-label 7.41 --dataset interactions
+python -m src.ml.cleanup_tables --apply
 ```
 
-Патч задается через `--patch-label`; соответствие между OpenDota patch label (`7.41`) и JSON patch id (`60`) хранится в `src/config.py`.
+The cleanup script keeps raw patch parquet tables:
 
-## Структура проекта
+- `matches.parquet`
+- `players.parquet`
+- `picks_bans.parquet`
+- `heroes_stats.parquet`
 
-- `src/ml/` - скрипты построения датасетов, обучения и оценки.
-- `data/` - локальные raw-данные и ML-таблицы, не коммитятся, кроме небольших справочников.
-- `models/` - локальные обученные модели и артефакты, не коммитятся.
-- `reports/` - текстовые отчеты и заметки по проекту.
-- `project_status.md` - текущий статус пайплайна и результатов.
-- `README.md`, `PROJECT_CONTEXT.md`, `AGENTS.md` - описание проекта и инструкции.
+and hero reference files:
 
-## Данные и модели
-
-Большие данные, parquet-файлы, JSON-дампы, обученные модели и локальные артефакты хранятся только локально и не должны попадать в Git. Небольшой справочник `data/heroes.csv` можно хранить в репозитории.
-
-## Data schema
-
-Raw JSON files, parquet tables and trained models are not stored in the repository.
-
-Instead, the repository contains schema documentation:
-
-- `docs/data_schema/parquet_tables.md`
-- `docs/data_schema/raw_match_json_structure.md`
-- `docs/data_schema/data_pipeline.md`
-- `project_status.md`
-- `reports/notebook_report.md`
-
-Цель - сделать репозиторий легким и понятным без загрузки больших данных.
-
-## Текущий статус
-
-Для `patch_60` уже построены:
-
-- `draft_events`
-- `draft_states`
-- `draft_candidates_pick`
-- `draft_candidates_ban`
-
-Также обучены первые CatBoost-модели для ранжирования кандидатов на pick и ban.
+- `data/heroes.csv`
+- `data/heroes.json`
