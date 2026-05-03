@@ -7,7 +7,7 @@ import streamlit as st
 from catboost import CatBoostRanker, Pool
 
 from src.config import get_ml_report_dirs, get_patch_num, get_patch_paths
-from src.ui.explanations import explain_recommendation
+from src.ui.explanations import explain_recommendation, explain_recommendation_markdown
 
 
 HEROES_PATH = Path("data/heroes.csv")
@@ -346,7 +346,16 @@ def recommend(
     df = df.sort_values("score", ascending=False).head(top_k).reset_index(drop=True)
     df["rank"] = df.index + 1
     df["explanation"] = df.apply(lambda row: explain_recommendation(row, action_type), axis=1)
+    df["explanation_markdown"] = df.apply(lambda row: explain_recommendation_markdown(row, action_type), axis=1)
     df["key_factors"] = df["explanation"]
-    output_cols = ["rank", "candidate_hero_id", "candidate_hero_name", "score", "explanation", "key_factors"]
+    output_cols = [
+        "rank",
+        "candidate_hero_id",
+        "candidate_hero_name",
+        "score",
+        "explanation",
+        "explanation_markdown",
+        "key_factors",
+    ]
     explanation_cols = [col for col in df.columns if "best_player_hero" in col]
     return df[output_cols + explanation_cols], own_roster, opponent_roster

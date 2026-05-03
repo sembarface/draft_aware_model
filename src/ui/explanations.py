@@ -55,12 +55,12 @@ def _player_signal(row, prefix, scope, team_text):
     games = _num(row.get(f"{prefix}best_player_hero_games_{scope}"))
     if games <= 0:
         return None
-    name = row.get(f"{prefix}best_player_hero_name_{scope}") or "one player"
+    name = row.get(f"{prefix}best_player_hero_name_{scope}") or "одного из игроков"
     winrate = row.get(f"{prefix}best_player_hero_winrate_{scope}")
     kda = row.get(f"{prefix}best_player_hero_avg_kda_{scope}")
-    scope_text = "in this patch" if scope == "patch" else "in available past data"
+    scope_text = "в текущем патче" if scope == "patch" else "в доступной прошлой статистике"
     return (
-        f"{team_text} {name}: {int(round(games))} games on this hero {scope_text}, "
+        f"{team_text} {name}: {int(round(games))} матч(ей) на этом герое {scope_text}, "
         f"winrate {_pct(winrate)}, KDA {_num(kda):.2f}"
     )
 
@@ -72,7 +72,7 @@ def meta_signals(row, action_type):
         _rate_signal(
             row,
             ["candidate_pick_rate", "candidate_pick_rate_alltime", "candidate_pick_rate_patch"],
-            "pick rate before this draft",
+            "герой часто выбирался до этого драфта",
             0.03,
         ),
     )
@@ -81,7 +81,7 @@ def meta_signals(row, action_type):
         _rate_signal(
             row,
             ["candidate_ban_rate", "candidate_ban_rate_alltime", "candidate_ban_rate_patch"],
-            "ban rate before this draft",
+            "герой часто банился до этого драфта",
             0.03 if action_type == "ban" else 0.05,
         ),
     )
@@ -90,7 +90,7 @@ def meta_signals(row, action_type):
         _rate_signal(
             row,
             ["candidate_pick_or_ban_rate", "candidate_pick_or_ban_rate_alltime", "candidate_pick_or_ban_rate_patch"],
-            "pick-or-ban rate before this draft",
+            "у героя высокий pick-or-ban rate до этого драфта",
             0.05,
         ),
     )
@@ -99,13 +99,13 @@ def meta_signals(row, action_type):
         _rate_signal(
             row,
             ["candidate_winrate", "candidate_winrate_alltime", "candidate_winrate_patch"],
-            "winrate before this draft",
+            "у героя высокий winrate до этого драфта",
             0.52,
         ),
     )
     matches = _num(_first_existing(row, ["candidate_matches_played", "candidate_matches", "candidate_games"]))
     if matches > 0:
-        signals.append(f"sample size for hero stats: {int(round(matches))} matches")
+        signals.append(f"статистика героя основана на {int(round(matches))} матчах")
     return signals
 
 
@@ -117,7 +117,7 @@ def interaction_signals(row, action_type):
             _delta_signal(
                 row,
                 ["candidate_ally_synergy_mean", "candidate_ally_synergy_max"],
-                "positive synergy with already picked allies",
+                "положительная синергия с уже выбранными союзниками",
             ),
         )
         _add(
@@ -125,7 +125,7 @@ def interaction_signals(row, action_type):
             _delta_signal(
                 row,
                 ["candidate_vs_enemy_counter_mean", "candidate_vs_enemy_counter_max"],
-                "positive matchup against enemy picks",
+                "хороший matchup против уже выбранных героев соперника",
             ),
         )
     else:
@@ -134,7 +134,7 @@ def interaction_signals(row, action_type):
             _delta_signal(
                 row,
                 ["candidate_enemy_synergy_mean", "candidate_enemy_synergy_max"],
-                "can strengthen the opponent draft",
+                "может усилить уже выбранный драфт соперника",
             ),
         )
         _add(
@@ -142,7 +142,7 @@ def interaction_signals(row, action_type):
             _delta_signal(
                 row,
                 ["candidate_vs_ally_counter_mean", "candidate_vs_ally_counter_max"],
-                "dangerous against your current picks",
+                "опасен против ваших уже выбранных героев",
             ),
         )
     return signals
@@ -151,28 +151,50 @@ def interaction_signals(row, action_type):
 def player_signals(row, action_type):
     signals = []
     if action_type == "pick":
-        _add(signals, _player_signal(row, "own_", "patch", "your player"))
-        _add(signals, _player_signal(row, "own_", "alltime", "your player"))
+        _add(signals, _player_signal(row, "own_", "patch", "у игрока вашей команды"))
+        _add(signals, _player_signal(row, "own_", "alltime", "у игрока вашей команды"))
     else:
-        _add(signals, _player_signal(row, "opponent_", "patch", "opponent player"))
-        _add(signals, _player_signal(row, "opponent_", "alltime", "opponent player"))
+        _add(signals, _player_signal(row, "opponent_", "patch", "у игрока соперника"))
+        _add(signals, _player_signal(row, "opponent_", "alltime", "у игрока соперника"))
     return signals
 
 
 def explain_recommendation(row, action_type):
-    parts = []
     meta = meta_signals(row, action_type)
     players = player_signals(row, action_type)
     interactions = interaction_signals(row, action_type)
+    parts = []
 
     if meta:
-        parts.append("Meta: " + "; ".join(meta[:3]))
+        parts.append("Мета героя: " + "; ".join(meta[:3]))
     if players:
-        parts.append("Players: " + "; ".join(players[:2]))
+        parts.append("Игроки: " + "; ".join(players[:2]))
     if interactions:
-        parts.append("Draft fit: " + "; ".join(interactions[:2]))
+        parts.append("Состояние драфта: " + "; ".join(interactions[:2]))
 
     if not parts:
-        parts.append("No single readable factor dominates; the score comes from the combined ranker signal.")
+        parts.append("нет одного доминирующего понятного фактора; рекомендация основана на суммарной оценке ranker-модели")
 
-    return "Positive factors: " + " | ".join(parts)
+    return "Положительные факторы: " + " | ".join(parts)
+
+
+def explain_recommendation_markdown(row, action_type):
+    meta = meta_signals(row, action_type)
+    players = player_signals(row, action_type)
+    interactions = interaction_signals(row, action_type)
+    blocks = ["**Положительные факторы**"]
+
+    if meta:
+        blocks.append("**Мета героя.** " + "; ".join(meta[:4]) + ".")
+    if players:
+        blocks.append("**Игроки.** " + "; ".join(players[:2]) + ".")
+    if interactions:
+        blocks.append("**Состояние драфта.** " + "; ".join(interactions[:2]) + ".")
+
+    if len(blocks) == 1:
+        blocks.append(
+            "Нет одного доминирующего понятного фактора. "
+            "Рекомендация основана на суммарной оценке ranker-модели."
+        )
+
+    return "\n\n".join(blocks)
