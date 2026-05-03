@@ -1,4 +1,7 @@
 import sys
+import base64
+import time
+import urllib.request
 from html import escape
 from pathlib import Path
 from textwrap import dedent
@@ -13,10 +16,13 @@ if str(ROOT_DIR) not in sys.path:
 
 from src.config import PATCH_LABEL
 from src.ui.draft_order import get_draft_order, get_empty_draft_table
-from src.ui.recommender import load_heroes, load_teams, recommend
+from src.ui.recommender import load_heroes, load_teams, recommend_cached
 
 
 st.set_page_config(page_title="Dota Draft Recommender", layout="wide")
+
+
+HERO_ICON_DIR = ROOT_DIR / "data" / "hero_icons"
 
 
 HERO_IMAGE_KEY_OVERRIDES = {
@@ -78,6 +84,25 @@ def get_hero_image_url(hero_image_key):
     return f"https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/{hero_image_key}.png"
 
 
+@st.cache_data(show_spinner=False)
+def get_hero_image_src(hero_image_key):
+    if not hero_image_key:
+        return ""
+    HERO_ICON_DIR.mkdir(parents=True, exist_ok=True)
+    icon_path = HERO_ICON_DIR / f"{hero_image_key}.png"
+    if not icon_path.exists():
+        try:
+            with urllib.request.urlopen(get_hero_image_url(hero_image_key), timeout=2) as response:
+                icon_path.write_bytes(response.read())
+        except Exception:
+            return get_hero_image_url(hero_image_key)
+    try:
+        encoded = base64.b64encode(icon_path.read_bytes()).decode("ascii")
+        return f"data:image/png;base64,{encoded}"
+    except Exception:
+        return get_hero_image_url(hero_image_key)
+
+
 def _hero_label_with_rank(row):
     if row.get("recommendation_rank"):
         return f"#{int(row['recommendation_rank'])} {row['hero_name']} ({row['hero_id']})"
@@ -90,6 +115,17 @@ def _draft_signature(patch_label, dataset, own_team, opponent_team, own_side, fi
 
 def _reset_draft():
     st.session_state["draft_actions"] = []
+
+
+def _add_action(action):
+    unavailable = {item["hero_id"] for item in st.session_state.get("draft_actions", [])}
+    if action["hero_id"] not in unavailable:
+        st.session_state["draft_actions"].append(action)
+
+
+def _undo_last_action():
+    if st.session_state.get("draft_actions"):
+        st.session_state["draft_actions"].pop()
 
 
 def _current_order(first_pick):
@@ -136,7 +172,7 @@ def _draft_table(first_pick, own_team, opponent_team):
     for idx, action in enumerate(actions):
         table.loc[idx, "hero_id"] = action["hero_id"]
         table.loc[idx, "hero_name"] = action["hero_name"]
-        table.loc[idx, "hero_image"] = get_hero_image_url(_hero_image_key(action["hero_name"]))
+        table.loc[idx, "hero_image"] = get_hero_image_src(_hero_image_key(action["hero_name"]))
     return table[["order", "phase", "action_type", "team_role", "team_name", "hero_image", "hero_name"]]
 
 
@@ -241,7 +277,7 @@ def _render_action_chips(title, actions, action_type):
     chips = []
     for action in actions:
         hero_name = action.get("hero_name") or ""
-        image_url = get_hero_image_url(_hero_image_key(hero_name))
+        image_url = get_hero_image_src(_hero_image_key(hero_name))
         image_html = (
             f'<img src="{escape(image_url)}" alt="" class="draft-chip-img">'
             if image_url
@@ -329,13 +365,12 @@ def main():
         own_side = st.radio("Our side", ["radiant", "dire"], horizontal=True)
         first_pick = st.radio("First pick", ["own", "opponent"], format_func=lambda x: "our team" if x == "own" else "opponent")
         top_k = st.slider("Top K", 5, 20, 10)
+        show_debug_timings = st.checkbox("Show debug timings", value=False)
         signature = _draft_signature(patch_label, dataset, own_team, opponent_team, own_side, first_pick)
         if st.session_state.get("draft_signature") != signature:
             st.session_state["draft_signature"] = signature
             _reset_draft()
-        if st.button("Reset draft", use_container_width=True):
-            _reset_draft()
-            st.rerun()
+        st.button("Reset draft", use_container_width=True, on_click=_reset_draft)
 
     if own_team["team_id"] == opponent_team["team_id"]:
         st.error("Choose different teams.")
@@ -387,8 +422,10 @@ def main():
     own_roster = []
     opponent_roster = []
     recommendation_error = None
+    recommendation_elapsed = None
     try:
-        recs, own_roster, opponent_roster = recommend(
+        started_at = time.perf_counter()
+        recs, own_roster, opponent_roster = recommend_cached(
             patch_label=patch_label,
             dataset=dataset,
             action_type=current["action_type"],
@@ -399,13 +436,13 @@ def main():
             acting_side=acting_side,
             order=current["order"],
             draft_phase=current["draft_phase"],
-            ally_picks_before=ally_picks,
-            enemy_picks_before=enemy_picks,
-            ally_bans_before=ally_bans,
-            enemy_bans_before=enemy_bans,
-            unavailable_heroes=unavailable,
-            top_k=max(top_k, 10),
+            ally_picks_before=tuple(ally_picks),
+            enemy_picks_before=tuple(enemy_picks),
+            ally_bans_before=tuple(ally_bans),
+            enemy_bans_before=tuple(enemy_bans),
+            unavailable_heroes=tuple(sorted(unavailable)),
         )
+        recommendation_elapsed = time.perf_counter() - started_at
     except Exception as exc:
         recommendation_error = exc
 
@@ -425,27 +462,26 @@ def main():
             hero_records.append(row)
 
     selected = st.selectbox("Hero for current action", hero_records, format_func=_hero_label_with_rank)
+    pending_action = {
+        "order": current["order"],
+        "action_type": current["action_type"],
+        "team_role": current["team_role"],
+        "team_id": current_team["team_id"],
+        "team_name": current_team["team_name"],
+        "hero_id": int(selected["hero_id"]),
+        "hero_name": selected["hero_name"],
+    }
     b1, b2 = st.columns([1, 1])
     with b1:
-        if st.button("Add action", type="primary", use_container_width=True):
-            if int(selected["hero_id"]) in unavailable:
-                st.error("This hero is already unavailable.")
-            else:
-                st.session_state["draft_actions"].append({
-                    "order": current["order"],
-                    "action_type": current["action_type"],
-                    "team_role": current["team_role"],
-                    "team_id": current_team["team_id"],
-                    "team_name": current_team["team_name"],
-                    "hero_id": int(selected["hero_id"]),
-                    "hero_name": selected["hero_name"],
-                })
-                st.rerun()
+        st.button(
+            "Add action",
+            type="primary",
+            use_container_width=True,
+            on_click=_add_action,
+            args=(pending_action,),
+        )
     with b2:
-        if st.button("Undo last action", use_container_width=True):
-            if st.session_state["draft_actions"]:
-                st.session_state["draft_actions"].pop()
-                st.rerun()
+        st.button("Undo last action", use_container_width=True, on_click=_undo_last_action)
 
     st.subheader("Recommendations")
     if recs is not None:
@@ -466,6 +502,16 @@ def main():
         st.info("Train the corresponding ranker model first, for example `python -m src.ml.train_catboost --patch-label 7.41 --action pick --dataset players`.")
     elif recommendation_error is not None:
         st.error(f"Recommendation failed: {recommendation_error}")
+
+    if show_debug_timings:
+        st.sidebar.caption(
+            "Recommendations: "
+            f"{recommendation_elapsed:.3f}s | "
+            f"available heroes: {len(available)} | "
+            f"draft actions: {len(st.session_state.get('draft_actions', []))}"
+            if recommendation_elapsed is not None
+            else f"Recommendations: failed | available heroes: {len(available)} | draft actions: {len(st.session_state.get('draft_actions', []))}"
+        )
 
 
 if __name__ == "__main__":

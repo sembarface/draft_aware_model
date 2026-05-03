@@ -5,7 +5,7 @@ import pandas as pd
 from catboost import CatBoostRanker, Pool
 
 from src.config import PATCH_LABEL, get_ml_report_dirs, get_patch_paths
-from src.ml.train_catboost import DATASET_CHOICES, output_stem
+from src.ml.feature_sets import DATASET_CHOICES, output_stem
 
 
 def parse_args(argv=None):

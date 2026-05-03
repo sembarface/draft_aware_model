@@ -128,6 +128,7 @@ def load_feature_config(patch_label="7.41", dataset="players", action_type="pick
         return json.load(f)
 
 
+@st.cache_data(show_spinner=False)
 def get_latest_team_roster(team_id, patch_label="7.41"):
     players = load_players(patch_label)
     if players.empty or "team_id" not in players.columns:
@@ -257,15 +258,12 @@ def _roster_feature_values(roster, hero_id, lookups, prefix, scope):
     return out
 
 
-def _player_features(hero_id, acting_team_id, opponent_team_id, patch_label):
-    lookups = load_player_lookups(patch_label)
-    own_roster = get_latest_team_roster(acting_team_id, patch_label)
-    opponent_roster = get_latest_team_roster(opponent_team_id, patch_label)
+def _player_features_from_rosters(hero_id, own_roster, opponent_roster, lookups):
     out = {}
     for scope in ["alltime", "patch"]:
         out.update(_roster_feature_values(own_roster, hero_id, lookups, "own_", scope))
         out.update(_roster_feature_values(opponent_roster, hero_id, lookups, "opponent_", scope))
-    return out, own_roster, opponent_roster
+    return out
 
 
 def _reference_defaults(patch_label, action_type, dataset):
@@ -303,6 +301,7 @@ def recommend(
     available = heroes[~heroes["hero_id"].isin(set(unavailable_heroes))].copy()
     rows = []
     patch_num = get_patch_num(patch_label)
+    lookups = load_player_lookups(patch_label)
     own_roster = get_latest_team_roster(acting_team_id, patch_label)
     opponent_roster = get_latest_team_roster(opponent_team_id, patch_label)
 
@@ -328,7 +327,7 @@ def recommend(
             "acting_team_name": acting_team_name,
             "opponent_team_name": opponent_team_name,
         })
-        player_feature_values, _, _ = _player_features(hero_id, acting_team_id, opponent_team_id, patch_label)
+        player_feature_values = _player_features_from_rosters(hero_id, own_roster, opponent_roster, lookups)
         row.update(player_feature_values)
         rows.append(row)
 
@@ -359,3 +358,41 @@ def recommend(
     ]
     explanation_cols = [col for col in df.columns if "best_player_hero" in col]
     return df[output_cols + explanation_cols], own_roster, opponent_roster
+
+
+@st.cache_data(show_spinner=False)
+def recommend_cached(
+    patch_label,
+    dataset,
+    action_type,
+    acting_team_id,
+    opponent_team_id,
+    acting_team_name,
+    opponent_team_name,
+    acting_side,
+    order,
+    draft_phase,
+    ally_picks_before,
+    enemy_picks_before,
+    ally_bans_before,
+    enemy_bans_before,
+    unavailable_heroes,
+):
+    return recommend(
+        patch_label=patch_label,
+        dataset=dataset,
+        action_type=action_type,
+        acting_team_id=acting_team_id,
+        opponent_team_id=opponent_team_id,
+        acting_team_name=acting_team_name,
+        opponent_team_name=opponent_team_name,
+        acting_side=acting_side,
+        order=order,
+        draft_phase=draft_phase,
+        ally_picks_before=list(ally_picks_before),
+        enemy_picks_before=list(enemy_picks_before),
+        ally_bans_before=list(ally_bans_before),
+        enemy_bans_before=list(enemy_bans_before),
+        unavailable_heroes=set(unavailable_heroes),
+        top_k=20,
+    )

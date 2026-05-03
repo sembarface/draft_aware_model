@@ -9,7 +9,8 @@ from src.ml.build_draft_states import build_draft_states
 from src.ml.build_player_stats import build_player_stats
 from src.ml.evaluate import evaluate
 from src.ml.export_reports import export_reports
-from src.ml.train_catboost import DATASET_CHOICES, train_model
+from src.ml.feature_sets import DATASET_CHOICES
+from src.ml.train_catboost import train_model
 
 
 def parse_args(argv=None):

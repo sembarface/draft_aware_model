@@ -21,11 +21,12 @@ catboost_info/
 *.pkl
 *.joblib
 
-data/patch_*/match_ids_patch_*.csv
-data/patch_*/parser_log_patch_*.csv
+data/
+
 models/
 pictures/
 test.ipynb
+
 
 !reports/
 !reports/ml/

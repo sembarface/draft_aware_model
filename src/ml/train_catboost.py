@@ -5,169 +5,8 @@ import pandas as pd
 from catboost import CatBoostRanker, Pool
 
 from src.config import PATCH_LABEL, get_ml_report_dirs, get_patch_paths
+from src.ml.feature_sets import CAT_FEATURES, DATASET_CHOICES, dataset_path, output_stem, select_features
 from src.ml.split_data import split_by_time
-
-
-DATASET_CHOICES = ["base", "interactions", "players", "players_smooth"]
-
-BASE_FEATURES = [
-    "order",
-    "draft_phase",
-    "action_type",
-    "acting_side",
-    "acting_team_id",
-    "opponent_team_id",
-    "patch",
-    "league_name",
-    "n_ally_picks_before",
-    "n_enemy_picks_before",
-    "n_ally_bans_before",
-    "n_enemy_bans_before",
-    "available_hero_count",
-    "candidate_hero_id",
-    "candidate_matches_played",
-    "candidate_winrate",
-    "candidate_pick_rate",
-    "candidate_ban_rate",
-    "candidate_pick_or_ban_rate",
-]
-
-INTERACTION_FEATURES = [
-    "candidate_ally_synergy_mean",
-    "candidate_ally_synergy_max",
-    "candidate_ally_synergy_min",
-    "candidate_ally_synergy_games_mean",
-    "candidate_vs_enemy_counter_mean",
-    "candidate_vs_enemy_counter_max",
-    "candidate_vs_enemy_counter_min",
-    "candidate_vs_enemy_matchup_games_mean",
-    "enemy_vs_candidate_counter_mean",
-    "candidate_enemy_synergy_mean",
-    "candidate_enemy_synergy_max",
-    "candidate_enemy_synergy_min",
-    "candidate_enemy_synergy_games_mean",
-    "candidate_vs_ally_counter_mean",
-    "candidate_vs_ally_counter_max",
-    "candidate_vs_ally_counter_min",
-    "candidate_vs_ally_matchup_games_mean",
-    "ally_vs_candidate_counter_mean",
-]
-
-PLAYER_FEATURES = [
-    "own_player_hero_games_alltime_max",
-    "own_player_hero_games_alltime_mean",
-    "own_player_hero_winrate_alltime_max",
-    "own_player_hero_winrate_alltime_mean",
-    "own_player_hero_avg_kda_alltime_max",
-    "own_player_hero_avg_gold_per_min_alltime_max",
-    "own_player_hero_avg_xp_per_min_alltime_max",
-    "own_player_hero_avg_hero_damage_alltime_max",
-    "own_player_hero_avg_tower_damage_alltime_max",
-    "opponent_player_hero_games_alltime_max",
-    "opponent_player_hero_games_alltime_mean",
-    "opponent_player_hero_winrate_alltime_max",
-    "opponent_player_hero_winrate_alltime_mean",
-    "opponent_player_hero_avg_kda_alltime_max",
-    "opponent_player_hero_avg_gold_per_min_alltime_max",
-    "opponent_player_hero_avg_xp_per_min_alltime_max",
-    "opponent_player_hero_avg_hero_damage_alltime_max",
-    "opponent_player_hero_avg_tower_damage_alltime_max",
-    "own_player_hero_games_patch_max",
-    "own_player_hero_winrate_patch_max",
-    "own_player_hero_avg_kda_patch_max",
-    "own_player_hero_avg_gold_per_min_patch_max",
-    "own_player_hero_avg_xp_per_min_patch_max",
-    "opponent_player_hero_games_patch_max",
-    "opponent_player_hero_winrate_patch_max",
-    "opponent_player_hero_avg_kda_patch_max",
-    "opponent_player_hero_avg_gold_per_min_patch_max",
-    "opponent_player_hero_avg_xp_per_min_patch_max",
-    "own_roster_player_matches_alltime_mean",
-    "own_roster_player_winrate_alltime_mean",
-    "own_roster_player_avg_kda_alltime_mean",
-    "own_roster_player_avg_gold_per_min_alltime_mean",
-    "own_roster_player_avg_xp_per_min_alltime_mean",
-    "opponent_roster_player_matches_alltime_mean",
-    "opponent_roster_player_winrate_alltime_mean",
-    "opponent_roster_player_avg_kda_alltime_mean",
-    "opponent_roster_player_avg_gold_per_min_alltime_mean",
-    "opponent_roster_player_avg_xp_per_min_alltime_mean",
-    "own_roster_player_matches_patch_mean",
-    "own_roster_player_winrate_patch_mean",
-    "own_roster_player_avg_kda_patch_mean",
-    "opponent_roster_player_matches_patch_mean",
-    "opponent_roster_player_winrate_patch_mean",
-    "opponent_roster_player_avg_kda_patch_mean",
-]
-
-PLAYER_SMOOTH_FEATURES = [
-    "own_player_hero_log_games_alltime_max",
-    "own_player_hero_log_games_alltime_mean",
-    "own_player_hero_reliability_alltime_max",
-    "own_player_hero_reliability_alltime_mean",
-    "own_player_hero_winrate_alltime_smooth_max",
-    "own_player_hero_winrate_alltime_smooth_mean",
-    "own_player_hero_avg_kda_alltime_smooth_max",
-    "own_player_hero_avg_gold_per_min_alltime_smooth_max",
-    "own_player_hero_avg_xp_per_min_alltime_smooth_max",
-    "own_player_hero_avg_hero_damage_alltime_smooth_max",
-    "own_player_hero_avg_tower_damage_alltime_smooth_max",
-    "opponent_player_hero_log_games_alltime_max",
-    "opponent_player_hero_log_games_alltime_mean",
-    "opponent_player_hero_reliability_alltime_max",
-    "opponent_player_hero_reliability_alltime_mean",
-    "opponent_player_hero_winrate_alltime_smooth_max",
-    "opponent_player_hero_winrate_alltime_smooth_mean",
-    "opponent_player_hero_avg_kda_alltime_smooth_max",
-    "opponent_player_hero_avg_gold_per_min_alltime_smooth_max",
-    "opponent_player_hero_avg_xp_per_min_alltime_smooth_max",
-    "opponent_player_hero_avg_hero_damage_alltime_smooth_max",
-    "opponent_player_hero_avg_tower_damage_alltime_smooth_max",
-    "own_player_hero_log_games_patch_max",
-    "own_player_hero_log_games_patch_mean",
-    "own_player_hero_reliability_patch_max",
-    "own_player_hero_reliability_patch_mean",
-    "own_player_hero_winrate_patch_smooth_max",
-    "own_player_hero_winrate_patch_smooth_mean",
-    "own_player_hero_avg_kda_patch_smooth_max",
-    "own_player_hero_avg_gold_per_min_patch_smooth_max",
-    "own_player_hero_avg_xp_per_min_patch_smooth_max",
-    "opponent_player_hero_log_games_patch_max",
-    "opponent_player_hero_log_games_patch_mean",
-    "opponent_player_hero_reliability_patch_max",
-    "opponent_player_hero_reliability_patch_mean",
-    "opponent_player_hero_winrate_patch_smooth_max",
-    "opponent_player_hero_winrate_patch_smooth_mean",
-    "opponent_player_hero_avg_kda_patch_smooth_max",
-    "opponent_player_hero_avg_gold_per_min_patch_smooth_max",
-    "opponent_player_hero_avg_xp_per_min_patch_smooth_max",
-    "own_roster_player_matches_alltime_mean",
-    "own_roster_player_winrate_alltime_mean",
-    "own_roster_player_avg_kda_alltime_mean",
-    "own_roster_player_avg_gold_per_min_alltime_mean",
-    "own_roster_player_avg_xp_per_min_alltime_mean",
-    "opponent_roster_player_matches_alltime_mean",
-    "opponent_roster_player_winrate_alltime_mean",
-    "opponent_roster_player_avg_kda_alltime_mean",
-    "opponent_roster_player_avg_gold_per_min_alltime_mean",
-    "opponent_roster_player_avg_xp_per_min_alltime_mean",
-    "own_roster_player_matches_patch_mean",
-    "own_roster_player_winrate_patch_mean",
-    "own_roster_player_avg_kda_patch_mean",
-    "opponent_roster_player_matches_patch_mean",
-    "opponent_roster_player_winrate_patch_mean",
-    "opponent_roster_player_avg_kda_patch_mean",
-]
-
-CAT_FEATURES = [
-    "action_type",
-    "acting_side",
-    "acting_team_id",
-    "opponent_team_id",
-    "patch",
-    "league_name",
-    "candidate_hero_id",
-]
 
 
 def parse_args(argv=None):
@@ -179,29 +18,9 @@ def parse_args(argv=None):
     return parser.parse_args(argv)
 
 
-def dataset_path(ml_dir, action, dataset):
-    suffix = "" if dataset == "base" else f"_{dataset}"
-    return ml_dir / f"draft_candidates_{action}{suffix}.parquet"
-
-
-def output_stem(action, dataset):
-    return f"{action}_{dataset}"
-
-
 def feature_config_path(patch_label, action, dataset):
     report_dirs = get_ml_report_dirs(patch_label)
     return report_dirs["features"] / f"{output_stem(action, dataset)}_features.json"
-
-
-def select_features(df, dataset):
-    features = BASE_FEATURES.copy()
-    if dataset in {"interactions", "players", "players_smooth"}:
-        features.extend(INTERACTION_FEATURES)
-    if dataset == "players":
-        features.extend(PLAYER_FEATURES)
-    if dataset == "players_smooth":
-        features.extend(PLAYER_SMOOTH_FEATURES)
-    return [col for col in features if col in df.columns]
 
 
 def _prepare(train, valid, test, features, cat_features):
@@ -221,14 +40,43 @@ def _sort_for_grouping(df):
     return df.sort_values(["state_id", "candidate_hero_id"]).reset_index(drop=True)
 
 
+def _validate_candidate_table(df, table_name):
+    required = {"state_id", "match_id", "start_time", "target", "candidate_hero_id"}
+    missing = sorted(required - set(df.columns))
+    if missing:
+        raise ValueError(f"{table_name} is missing required columns: {missing}")
+    target_sum = df.groupby("state_id")["target"].sum()
+    bad = target_sum[target_sum != 1]
+    if not bad.empty:
+        raise ValueError(f"{table_name}: every state_id must have exactly one target=1. Examples: {bad.head().to_dict()}")
+
+
+def _validate_split(train, valid, test):
+    split_ids = {
+        "train": set(train["match_id"].unique()),
+        "valid": set(valid["match_id"].unique()),
+        "test": set(test["match_id"].unique()),
+    }
+    overlaps = {
+        "train_valid": split_ids["train"] & split_ids["valid"],
+        "train_test": split_ids["train"] & split_ids["test"],
+        "valid_test": split_ids["valid"] & split_ids["test"],
+    }
+    bad = {name: sorted(values)[:5] for name, values in overlaps.items() if values}
+    if bad:
+        raise ValueError(f"match_id leakage across splits: {bad}")
+
+
 def train_model(action="pick", dataset="base", patch_label=PATCH_LABEL, loss_function="YetiRank"):
     _, _, _, ml_dir, model_dir = get_patch_paths(patch_label)
     model_dir.mkdir(parents=True, exist_ok=True)
 
     path = dataset_path(ml_dir, action, dataset)
     df = pd.read_parquet(path)
+    _validate_candidate_table(df, path.name)
 
     train, valid, test = split_by_time(df)
+    _validate_split(train, valid, test)
     train = _sort_for_grouping(train)
     valid = _sort_for_grouping(valid)
     test = _sort_for_grouping(test)
@@ -238,6 +86,8 @@ def train_model(action="pick", dataset="base", patch_label=PATCH_LABEL, loss_fun
     print("test:", test.shape)
 
     features = select_features(df, dataset)
+    if not features:
+        raise ValueError(f"No training features selected for dataset={dataset}")
     cat_features = [col for col in CAT_FEATURES if col in features]
     train, valid, test = _prepare(train, valid, test, features, cat_features)
 

@@ -4,7 +4,7 @@ import json
 import pandas as pd
 
 from src.config import PATCH_LABEL, get_ml_report_dirs
-from src.ml.train_catboost import DATASET_CHOICES, output_stem
+from src.ml.feature_sets import DATASET_CHOICES, output_stem
 
 
 METRICS = ["states", "top1", "top3", "top5", "top10", "mean_rank", "mrr"]

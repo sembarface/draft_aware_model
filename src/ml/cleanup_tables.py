@@ -4,6 +4,7 @@ from pathlib import Path
 
 GENERATED_PATTERNS = [
     "data/patch_*/ml/*.parquet",
+    "data/stats/**/*.parquet",
     "data/patch_*/player_stats.parquet",
     "data/patch_*/player_hero_stats.parquet",
     "data/alltime/player_stats.parquet",
