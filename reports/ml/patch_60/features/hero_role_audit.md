@@ -1,0 +1,14 @@
+# Hero role audit
+
+| hero_id | hero_name | dominant_position | active_positions_ge_020 | pos1_prob | pos2_prob | pos3_prob | pos4_prob | pos5_prob | core_prob | support_prob | flex_score | audit_flag |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 135 | Dawnbreaker | pos3 | 1 | 0.12 | 0.08 | 0.58 | 0.17 | 0.05 | 0.78 | 0.22 | 0.42 | ok |
+| 49 | Dragon Knight | pos1 | 3 | 0.35 | 0.3 | 0.25 | 0.07 | 0.03 | 0.8999999999999999 | 0.1 | 0.65 | broad flex, core-heavy |
+| 59 | Huskar | pos2 | 1 | 0.18 | 0.65 | 0.12 | 0.03 | 0.02 | 0.95 | 0.05 | 0.35 | core-heavy |
+| 136 | Marci | pos4 | 2 | 0.04 | 0.04 | 0.12 | 0.55 | 0.25 | 0.2 | 0.8 | 0.45 | ok |
+| 9 | Mirana | pos4 | 2 | 0.05 | 0.08 | 0.12 | 0.55 | 0.2 | 0.25 | 0.75 | 0.45 | ok |
+| 53 | Nature's Prophet | pos1 | 3 | 0.35 | 0.3 | 0.25 | 0.07 | 0.03 | 0.8999999999999999 | 0.1 | 0.65 | broad flex, core-heavy |
+| 120 | Pangolier | pos3 | 2 | 0.03 | 0.35 | 0.45 | 0.15 | 0.02 | 0.83 | 0.17 | 0.55 | ok |
+| 14 | Pudge | pos4 | 3 | 0.03 | 0.05 | 0.2 | 0.52 | 0.2 | 0.28 | 0.72 | 0.48 | broad flex |
+| 19 | Tiny | pos1 | 3 | 0.35 | 0.3 | 0.25 | 0.07 | 0.03 | 0.8999999999999999 | 0.1 | 0.65 | broad flex, core-heavy |
+| 21 | Windranger | pos1 | 3 | 0.35 | 0.3 | 0.25 | 0.07 | 0.03 | 0.8999999999999999 | 0.1 | 0.65 | broad flex, core-heavy |
