@@ -1,0 +1,46 @@
+{
+  "patch_label": "7.41",
+  "action": "pick",
+  "dataset": "base",
+  "model_type": "ranker",
+  "cutoff_rule": "source_start_time < current_match_start_time",
+  "training_params": {
+    "iterations": 500,
+    "learning_rate": 0.05,
+    "depth": 6,
+    "loss_function": "YetiRank",
+    "eval_metric": "NDCG",
+    "random_seed": 42,
+    "early_stopping_rounds": 50
+  },
+  "features": [
+    "order",
+    "draft_phase",
+    "action_type",
+    "acting_side",
+    "acting_team_id",
+    "opponent_team_id",
+    "patch",
+    "league_name",
+    "n_ally_picks_before",
+    "n_enemy_picks_before",
+    "n_ally_bans_before",
+    "n_enemy_bans_before",
+    "available_hero_count",
+    "candidate_hero_id",
+    "candidate_matches_played",
+    "candidate_winrate",
+    "candidate_pick_rate",
+    "candidate_ban_rate",
+    "candidate_pick_or_ban_rate"
+  ],
+  "cat_features": [
+    "action_type",
+    "acting_side",
+    "acting_team_id",
+    "opponent_team_id",
+    "patch",
+    "league_name",
+    "candidate_hero_id"
+  ]
+}

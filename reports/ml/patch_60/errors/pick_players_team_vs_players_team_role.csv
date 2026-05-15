@@ -1,0 +1,651 @@
+match_id,order,draft_phase,action_type,acting_side,acting_team_id,opponent_team_id,state_id,true_hero_id,true_hero_name,old_rank,new_rank,rank_delta,old_top10,new_top10,old_top5,new_top5,old_top3,new_top3,improved_into_top10,worsened_out_of_top10,improved_into_top5,worsened_out_of_top5,improved_into_top3,worsened_out_of_top3
+8781879925,13,2,pick,radiant,9600141.0,10108713.0,8781879925_13,138,Muerta,8,9,-1,True,True,False,False,False,False,False,False,False,False,False,False
+8781879925,14,2,pick,dire,10108713.0,9600141.0,8781879925_14,51,Clockwerk,3,6,-3,True,True,True,False,True,False,False,False,False,True,False,True
+8781879925,15,2,pick,dire,10108713.0,9600141.0,8781879925_15,66,Chen,13,10,3,False,True,False,False,False,False,True,False,False,False,False,False
+8781879925,16,2,pick,radiant,9600141.0,10108713.0,8781879925_16,17,Storm Spirit,4,3,1,True,True,True,True,False,True,False,False,False,False,True,False
+8781879925,17,3,pick,radiant,9600141.0,10108713.0,8781879925_17,100,Tusk,5,24,-19,True,False,True,False,False,False,False,True,False,True,False,False
+8781879925,18,3,pick,dire,10108713.0,9600141.0,8781879925_18,108,Underlord,13,30,-17,False,False,False,False,False,False,False,False,False,False,False,False
+8781879925,23,3,pick,dire,10108713.0,9600141.0,8781879925_23,73,Alchemist,10,3,7,True,True,False,True,False,True,False,False,True,False,True,False
+8781879925,24,3,pick,radiant,9600141.0,10108713.0,8781879925_24,98,Timbersaw,54,17,37,False,False,False,False,False,False,False,False,False,False,False,False
+8781879925,8,1,pick,dire,10108713.0,9600141.0,8781879925_8,38,Beastmaster,3,3,0,True,True,True,True,True,True,False,False,False,False,False,False
+8781879925,9,2,pick,radiant,9600141.0,10108713.0,8781879925_9,58,Enchantress,15,17,-2,False,False,False,False,False,False,False,False,False,False,False,False
+8782527726,13,2,pick,radiant,9572001.0,10108947.0,8782527726_13,86,Rubick,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8782527726,14,2,pick,dire,10108947.0,9572001.0,8782527726_14,131,Ringmaster,24,16,8,False,False,False,False,False,False,False,False,False,False,False,False
+8782527726,15,2,pick,dire,10108947.0,9572001.0,8782527726_15,120,Pangolier,8,5,3,True,True,False,True,False,False,False,False,True,False,False,False
+8782527726,16,2,pick,radiant,9572001.0,10108947.0,8782527726_16,82,Meepo,10,8,2,True,True,False,False,False,False,False,False,False,False,False,False
+8782527726,17,3,pick,radiant,9572001.0,10108947.0,8782527726_17,45,Pugna,66,26,40,False,False,False,False,False,False,False,False,False,False,False,False
+8782527726,18,3,pick,dire,10108947.0,9572001.0,8782527726_18,39,Queen of Pain,8,25,-17,True,False,False,False,False,False,False,True,False,False,False,False
+8782527726,23,3,pick,dire,10108947.0,9572001.0,8782527726_23,7,Earthshaker,67,88,-21,False,False,False,False,False,False,False,False,False,False,False,False
+8782527726,24,3,pick,radiant,9572001.0,10108947.0,8782527726_24,74,Invoker,3,1,2,True,True,True,True,True,True,False,False,False,False,False,False
+8782527726,8,1,pick,dire,10108947.0,9572001.0,8782527726_8,114,Monkey King,4,5,-1,True,True,True,True,False,False,False,False,False,False,False,False
+8782527726,9,2,pick,radiant,9572001.0,10108947.0,8782527726_9,38,Beastmaster,5,3,2,True,True,True,True,False,True,False,False,False,False,True,False
+8782581053,13,2,pick,dire,9572001.0,10108947.0,8782581053_13,90,Keeper of the Light,5,4,1,True,True,True,True,False,False,False,False,False,False,False,False
+8782581053,14,2,pick,radiant,10108947.0,9572001.0,8782581053_14,120,Pangolier,4,4,0,True,True,True,True,False,False,False,False,False,False,False,False
+8782581053,15,2,pick,radiant,10108947.0,9572001.0,8782581053_15,123,Hoodwink,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8782581053,16,2,pick,dire,9572001.0,10108947.0,8782581053_16,155,Largo,16,12,4,False,False,False,False,False,False,False,False,False,False,False,False
+8782581053,17,3,pick,dire,9572001.0,10108947.0,8782581053_17,13,Puck,5,10,-5,True,True,True,False,False,False,False,False,False,True,False,False
+8782581053,18,3,pick,radiant,10108947.0,9572001.0,8782581053_18,60,Night Stalker,69,69,0,False,False,False,False,False,False,False,False,False,False,False,False
+8782581053,23,3,pick,radiant,10108947.0,9572001.0,8782581053_23,68,Ancient Apparition,85,23,62,False,False,False,False,False,False,False,False,False,False,False,False
+8782581053,24,3,pick,dire,9572001.0,10108947.0,8782581053_24,64,Jakiro,29,4,25,False,True,False,True,False,False,True,False,True,False,False,False
+8782581053,8,1,pick,radiant,10108947.0,9572001.0,8782581053_8,114,Monkey King,1,2,-1,True,True,True,True,True,True,False,False,False,False,False,False
+8782581053,9,2,pick,dire,9572001.0,10108947.0,8782581053_9,145,Kez,11,13,-2,False,False,False,False,False,False,False,False,False,False,False,False
+8782608765,13,2,pick,radiant,9895247.0,9928636.0,8782608765_13,123,Hoodwink,2,1,1,True,True,True,True,True,True,False,False,False,False,False,False
+8782608765,14,2,pick,dire,9928636.0,9895247.0,8782608765_14,86,Rubick,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8782608765,15,2,pick,dire,9928636.0,9895247.0,8782608765_15,105,Techies,10,18,-8,True,False,False,False,False,False,False,True,False,False,False,False
+8782608765,16,2,pick,radiant,9895247.0,9928636.0,8782608765_16,64,Jakiro,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8782608765,17,3,pick,radiant,9895247.0,9928636.0,8782608765_17,13,Puck,6,2,4,True,True,False,True,False,True,False,False,True,False,True,False
+8782608765,18,3,pick,dire,9928636.0,9895247.0,8782608765_18,78,Brewmaster,8,18,-10,True,False,False,False,False,False,False,True,False,False,False,False
+8782608765,23,3,pick,dire,9928636.0,9895247.0,8782608765_23,12,Phantom Lancer,14,21,-7,False,False,False,False,False,False,False,False,False,False,False,False
+8782608765,24,3,pick,radiant,9895247.0,9928636.0,8782608765_24,23,Kunkka,15,20,-5,False,False,False,False,False,False,False,False,False,False,False,False
+8782608765,8,1,pick,dire,9928636.0,9895247.0,8782608765_8,28,Slardar,3,3,0,True,True,True,True,True,True,False,False,False,False,False,False
+8782608765,9,2,pick,radiant,9895247.0,9928636.0,8782608765_9,109,Terrorblade,37,37,0,False,False,False,False,False,False,False,False,False,False,False,False
+8782625329,13,2,pick,dire,10108947.0,9572001.0,8782625329_13,58,Enchantress,6,5,1,True,True,False,True,False,False,False,False,True,False,False,False
+8782625329,14,2,pick,radiant,9572001.0,10108947.0,8782625329_14,90,Keeper of the Light,4,3,1,True,True,True,True,False,True,False,False,False,False,True,False
+8782625329,15,2,pick,radiant,9572001.0,10108947.0,8782625329_15,126,Void Spirit,12,34,-22,False,False,False,False,False,False,False,False,False,False,False,False
+8782625329,16,2,pick,dire,10108947.0,9572001.0,8782625329_16,120,Pangolier,3,3,0,True,True,True,True,True,True,False,False,False,False,False,False
+8782625329,17,3,pick,dire,10108947.0,9572001.0,8782625329_17,21,Windranger,19,13,6,False,False,False,False,False,False,False,False,False,False,False,False
+8782625329,18,3,pick,radiant,9572001.0,10108947.0,8782625329_18,109,Terrorblade,18,15,3,False,False,False,False,False,False,False,False,False,False,False,False
+8782625329,23,3,pick,radiant,9572001.0,10108947.0,8782625329_23,121,Grimstroke,55,23,32,False,False,False,False,False,False,False,False,False,False,False,False
+8782625329,24,3,pick,dire,10108947.0,9572001.0,8782625329_24,51,Clockwerk,12,10,2,False,True,False,False,False,False,True,False,False,False,False,False
+8782625329,8,1,pick,radiant,9572001.0,10108947.0,8782625329_8,28,Slardar,3,3,0,True,True,True,True,True,True,False,False,False,False,False,False
+8782625329,9,2,pick,dire,10108947.0,9572001.0,8782625329_9,39,Queen of Pain,4,6,-2,True,True,True,False,False,False,False,False,False,True,False,False
+8782650848,13,2,pick,radiant,9928636.0,9895247.0,8782650848_13,19,Tiny,24,26,-2,False,False,False,False,False,False,False,False,False,False,False,False
+8782650848,14,2,pick,dire,9895247.0,9928636.0,8782650848_14,120,Pangolier,8,1,7,True,True,False,True,False,True,False,False,True,False,True,False
+8782650848,15,2,pick,dire,9895247.0,9928636.0,8782650848_15,64,Jakiro,4,1,3,True,True,True,True,False,True,False,False,False,False,True,False
+8782650848,16,2,pick,radiant,9928636.0,9895247.0,8782650848_16,85,Undying,91,53,38,False,False,False,False,False,False,False,False,False,False,False,False
+8782650848,17,3,pick,radiant,9928636.0,9895247.0,8782650848_17,121,Grimstroke,22,57,-35,False,False,False,False,False,False,False,False,False,False,False,False
+8782650848,18,3,pick,dire,9895247.0,9928636.0,8782650848_18,90,Keeper of the Light,28,12,16,False,False,False,False,False,False,False,False,False,False,False,False
+8782650848,23,3,pick,dire,9895247.0,9928636.0,8782650848_23,100,Tusk,22,10,12,False,True,False,False,False,False,True,False,False,False,False,False
+8782650848,24,3,pick,radiant,9928636.0,9895247.0,8782650848_24,17,Storm Spirit,17,15,2,False,False,False,False,False,False,False,False,False,False,False,False
+8782650848,8,1,pick,dire,9895247.0,9928636.0,8782650848_8,80,Lone Druid,28,28,0,False,False,False,False,False,False,False,False,False,False,False,False
+8782650848,9,2,pick,radiant,9928636.0,9895247.0,8782650848_9,123,Hoodwink,2,4,-2,True,True,True,True,True,False,False,False,False,False,False,True
+8782678248,13,2,pick,radiant,9467224.0,9303484.0,8782678248_13,79,Shadow Demon,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8782678248,14,2,pick,dire,9303484.0,9467224.0,8782678248_14,47,Viper,15,11,4,False,False,False,False,False,False,False,False,False,False,False,False
+8782678248,15,2,pick,dire,9303484.0,9467224.0,8782678248_15,22,Zeus,14,23,-9,False,False,False,False,False,False,False,False,False,False,False,False
+8782678248,16,2,pick,radiant,9467224.0,9303484.0,8782678248_16,38,Beastmaster,7,7,0,True,True,False,False,False,False,False,False,False,False,False,False
+8782678248,17,3,pick,radiant,9467224.0,9303484.0,8782678248_17,58,Enchantress,3,4,-1,True,True,True,True,True,False,False,False,False,False,False,True
+8782678248,18,3,pick,dire,9303484.0,9467224.0,8782678248_18,108,Underlord,14,11,3,False,False,False,False,False,False,False,False,False,False,False,False
+8782678248,23,3,pick,dire,9303484.0,9467224.0,8782678248_23,63,Weaver,9,2,7,True,True,False,True,False,True,False,False,True,False,True,False
+8782678248,24,3,pick,radiant,9467224.0,9303484.0,8782678248_24,96,Centaur Warrunner,14,13,1,False,False,False,False,False,False,False,False,False,False,False,False
+8782678248,8,1,pick,dire,9303484.0,9467224.0,8782678248_8,86,Rubick,2,3,-1,True,True,True,True,True,True,False,False,False,False,False,False
+8782678248,9,2,pick,radiant,9467224.0,9303484.0,8782678248_9,19,Tiny,40,26,14,False,False,False,False,False,False,False,False,False,False,False,False
+8782750796,13,2,pick,radiant,9303484.0,9467224.0,8782750796_13,114,Monkey King,14,29,-15,False,False,False,False,False,False,False,False,False,False,False,False
+8782750796,14,2,pick,dire,9467224.0,9303484.0,8782750796_14,155,Largo,8,5,3,True,True,False,True,False,False,False,False,True,False,False,False
+8782750796,15,2,pick,dire,9467224.0,9303484.0,8782750796_15,64,Jakiro,4,6,-2,True,True,True,False,False,False,False,False,False,True,False,False
+8782750796,16,2,pick,radiant,9303484.0,9467224.0,8782750796_16,43,Death Prophet,81,92,-11,False,False,False,False,False,False,False,False,False,False,False,False
+8782750796,17,3,pick,radiant,9303484.0,9467224.0,8782750796_17,27,Shadow Shaman,24,13,11,False,False,False,False,False,False,False,False,False,False,False,False
+8782750796,18,3,pick,dire,9467224.0,9303484.0,8782750796_18,13,Puck,2,3,-1,True,True,True,True,True,True,False,False,False,False,False,False
+8782750796,23,3,pick,dire,9467224.0,9303484.0,8782750796_23,70,Ursa,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8782750796,24,3,pick,radiant,9303484.0,9467224.0,8782750796_24,135,Dawnbreaker,36,76,-40,False,False,False,False,False,False,False,False,False,False,False,False
+8782750796,8,1,pick,dire,9467224.0,9303484.0,8782750796_8,123,Hoodwink,4,4,0,True,True,True,True,False,False,False,False,False,False,False,False
+8782750796,9,2,pick,radiant,9303484.0,9467224.0,8782750796_9,120,Pangolier,2,1,1,True,True,True,True,True,True,False,False,False,False,False,False
+8782782376,13,2,pick,radiant,9600141.0,9973656.0,8782782376_13,75,Silencer,53,38,15,False,False,False,False,False,False,False,False,False,False,False,False
+8782782376,14,2,pick,dire,9973656.0,9600141.0,8782782376_14,108,Underlord,29,16,13,False,False,False,False,False,False,False,False,False,False,False,False
+8782782376,15,2,pick,dire,9973656.0,9600141.0,8782782376_15,86,Rubick,2,2,0,True,True,True,True,True,True,False,False,False,False,False,False
+8782782376,16,2,pick,radiant,9600141.0,9973656.0,8782782376_16,131,Ringmaster,2,3,-1,True,True,True,True,True,True,False,False,False,False,False,False
+8782782376,17,3,pick,radiant,9600141.0,9973656.0,8782782376_17,69,Doom,3,1,2,True,True,True,True,True,True,False,False,False,False,False,False
+8782782376,18,3,pick,dire,9973656.0,9600141.0,8782782376_18,109,Terrorblade,20,15,5,False,False,False,False,False,False,False,False,False,False,False,False
+8782782376,23,3,pick,dire,9973656.0,9600141.0,8782782376_23,32,Riki,90,44,46,False,False,False,False,False,False,False,False,False,False,False,False
+8782782376,24,3,pick,radiant,9600141.0,9973656.0,8782782376_24,106,Ember Spirit,2,2,0,True,True,True,True,True,True,False,False,False,False,False,False
+8782782376,8,1,pick,dire,9973656.0,9600141.0,8782782376_8,110,Phoenix,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8782782376,9,2,pick,radiant,9600141.0,9973656.0,8782782376_9,19,Tiny,8,10,-2,True,True,False,False,False,False,False,False,False,False,False,False
+8782870288,13,2,pick,dire,9973656.0,9600141.0,8782870288_13,87,Disruptor,17,11,6,False,False,False,False,False,False,False,False,False,False,False,False
+8782870288,14,2,pick,radiant,9600141.0,9973656.0,8782870288_14,86,Rubick,3,3,0,True,True,True,True,True,True,False,False,False,False,False,False
+8782870288,15,2,pick,radiant,9600141.0,9973656.0,8782870288_15,105,Techies,12,13,-1,False,False,False,False,False,False,False,False,False,False,False,False
+8782870288,16,2,pick,dire,9973656.0,9600141.0,8782870288_16,69,Doom,5,11,-6,True,False,True,False,False,False,False,True,False,True,False,False
+8782870288,17,3,pick,dire,9973656.0,9600141.0,8782870288_17,123,Hoodwink,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8782870288,18,3,pick,radiant,9600141.0,9973656.0,8782870288_18,145,Kez,7,4,3,True,True,False,True,False,False,False,False,True,False,False,False
+8782870288,23,3,pick,radiant,9600141.0,9973656.0,8782870288_23,16,Sand King,3,2,1,True,True,True,True,True,True,False,False,False,False,False,False
+8782870288,24,3,pick,dire,9973656.0,9600141.0,8782870288_24,46,Templar Assassin,21,15,6,False,False,False,False,False,False,False,False,False,False,False,False
+8782870288,8,1,pick,radiant,9600141.0,9973656.0,8782870288_8,120,Pangolier,2,3,-1,True,True,True,True,True,True,False,False,False,False,False,False
+8782870288,9,2,pick,dire,9973656.0,9600141.0,8782870288_9,114,Monkey King,9,8,1,True,True,False,False,False,False,False,False,False,False,False,False
+8782870472,13,2,pick,radiant,9247354.0,2163.0,8782870472_13,123,Hoodwink,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8782870472,14,2,pick,dire,2163.0,9247354.0,8782870472_14,108,Underlord,4,6,-2,True,True,True,False,False,False,False,False,False,True,False,False
+8782870472,15,2,pick,dire,2163.0,9247354.0,8782870472_15,86,Rubick,1,3,-2,True,True,True,True,True,True,False,False,False,False,False,False
+8782870472,16,2,pick,radiant,9247354.0,2163.0,8782870472_16,114,Monkey King,6,10,-4,True,True,False,False,False,False,False,False,False,False,False,False
+8782870472,17,3,pick,radiant,9247354.0,2163.0,8782870472_17,110,Phoenix,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8782870472,18,3,pick,dire,2163.0,9247354.0,8782870472_18,17,Storm Spirit,11,3,8,False,True,False,True,False,True,True,False,True,False,True,False
+8782870472,23,3,pick,dire,2163.0,9247354.0,8782870472_23,111,Oracle,46,4,42,False,True,False,True,False,False,True,False,True,False,False,False
+8782870472,24,3,pick,radiant,9247354.0,2163.0,8782870472_24,137,Primal Beast,2,3,-1,True,True,True,True,True,True,False,False,False,False,False,False
+8782870472,8,1,pick,dire,2163.0,9247354.0,8782870472_8,80,Lone Druid,2,2,0,True,True,True,True,True,True,False,False,False,False,False,False
+8782870472,9,2,pick,radiant,9247354.0,2163.0,8782870472_9,73,Alchemist,3,3,0,True,True,True,True,True,True,False,False,False,False,False,False
+8783006717,13,2,pick,radiant,9247354.0,2163.0,8783006717_13,86,Rubick,2,2,0,True,True,True,True,True,True,False,False,False,False,False,False
+8783006717,14,2,pick,dire,2163.0,9247354.0,8783006717_14,123,Hoodwink,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8783006717,15,2,pick,dire,2163.0,9247354.0,8783006717_15,21,Windranger,6,2,4,True,True,False,True,False,True,False,False,True,False,True,False
+8783006717,16,2,pick,radiant,9247354.0,2163.0,8783006717_16,75,Silencer,11,5,6,False,True,False,True,False,False,True,False,True,False,False,False
+8783006717,17,3,pick,radiant,9247354.0,2163.0,8783006717_17,29,Tidehunter,4,2,2,True,True,True,True,False,True,False,False,False,False,True,False
+8783006717,18,3,pick,dire,2163.0,9247354.0,8783006717_18,39,Queen of Pain,5,10,-5,True,True,True,False,False,False,False,False,False,True,False,False
+8783006717,23,3,pick,dire,2163.0,9247354.0,8783006717_23,83,Treant Protector,31,3,28,False,True,False,True,False,True,True,False,True,False,True,False
+8783006717,24,3,pick,radiant,9247354.0,2163.0,8783006717_24,16,Sand King,2,1,1,True,True,True,True,True,True,False,False,False,False,False,False
+8783006717,8,1,pick,dire,2163.0,9247354.0,8783006717_8,120,Pangolier,2,3,-1,True,True,True,True,True,True,False,False,False,False,False,False
+8783006717,9,2,pick,radiant,9247354.0,2163.0,8783006717_9,114,Monkey King,3,3,0,True,True,True,True,True,True,False,False,False,False,False,False
+8783105237,13,2,pick,radiant,7119388.0,8255888.0,8783105237_13,75,Silencer,6,3,3,True,True,False,True,False,True,False,False,True,False,True,False
+8783105237,14,2,pick,dire,8255888.0,7119388.0,8783105237_14,31,Lich,2,2,0,True,True,True,True,True,True,False,False,False,False,False,False
+8783105237,15,2,pick,dire,8255888.0,7119388.0,8783105237_15,21,Windranger,19,8,11,False,True,False,False,False,False,True,False,False,False,False,False
+8783105237,16,2,pick,radiant,7119388.0,8255888.0,8783105237_16,131,Ringmaster,8,14,-6,True,False,False,False,False,False,False,True,False,False,False,False
+8783105237,17,3,pick,radiant,7119388.0,8255888.0,8783105237_17,108,Underlord,22,16,6,False,False,False,False,False,False,False,False,False,False,False,False
+8783105237,18,3,pick,dire,8255888.0,7119388.0,8783105237_18,54,Lifestealer,7,15,-8,True,False,False,False,False,False,False,True,False,False,False,False
+8783105237,23,3,pick,dire,8255888.0,7119388.0,8783105237_23,13,Puck,14,8,6,False,True,False,False,False,False,True,False,False,False,False,False
+8783105237,24,3,pick,radiant,7119388.0,8255888.0,8783105237_24,109,Terrorblade,1,4,-3,True,True,True,True,True,False,False,False,False,False,False,True
+8783105237,8,1,pick,dire,8255888.0,7119388.0,8783105237_8,38,Beastmaster,2,3,-1,True,True,True,True,True,True,False,False,False,False,False,False
+8783105237,9,2,pick,radiant,7119388.0,8255888.0,8783105237_9,19,Tiny,7,7,0,True,True,False,False,False,False,False,False,False,False,False,False
+8783198427,13,2,pick,radiant,8255888.0,7119388.0,8783198427_13,13,Puck,11,10,1,False,True,False,False,False,False,True,False,False,False,False,False
+8783198427,14,2,pick,dire,7119388.0,8255888.0,8783198427_14,75,Silencer,8,7,1,True,True,False,False,False,False,False,False,False,False,False,False
+8783198427,15,2,pick,dire,7119388.0,8255888.0,8783198427_15,126,Void Spirit,19,8,11,False,True,False,False,False,False,True,False,False,False,False,False
+8783198427,16,2,pick,radiant,8255888.0,7119388.0,8783198427_16,138,Muerta,9,5,4,True,True,False,True,False,False,False,False,True,False,False,False
+8783198427,17,3,pick,radiant,8255888.0,7119388.0,8783198427_17,83,Treant Protector,28,19,9,False,False,False,False,False,False,False,False,False,False,False,False
+8783198427,18,3,pick,dire,7119388.0,8255888.0,8783198427_18,2,Axe,16,9,7,False,True,False,False,False,False,True,False,False,False,False,False
+8783198427,23,3,pick,dire,7119388.0,8255888.0,8783198427_23,48,Luna,44,7,37,False,True,False,False,False,False,True,False,False,False,False,False
+8783198427,24,3,pick,radiant,8255888.0,7119388.0,8783198427_24,77,Lycan,26,10,16,False,True,False,False,False,False,True,False,False,False,False,False
+8783198427,8,1,pick,dire,7119388.0,8255888.0,8783198427_8,123,Hoodwink,5,4,1,True,True,True,True,False,False,False,False,False,False,False,False
+8783198427,9,2,pick,radiant,8255888.0,7119388.0,8783198427_9,86,Rubick,2,2,0,True,True,True,True,True,True,False,False,False,False,False,False
+8783980542,13,2,pick,radiant,9247354.0,7119388.0,8783980542_13,123,Hoodwink,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8783980542,14,2,pick,dire,7119388.0,9247354.0,8783980542_14,3,Bane,35,29,6,False,False,False,False,False,False,False,False,False,False,False,False
+8783980542,15,2,pick,dire,7119388.0,9247354.0,8783980542_15,86,Rubick,2,1,1,True,True,True,True,True,True,False,False,False,False,False,False
+8783980542,16,2,pick,radiant,9247354.0,7119388.0,8783980542_16,19,Tiny,7,7,0,True,True,False,False,False,False,False,False,False,False,False,False
+8783980542,17,3,pick,radiant,9247354.0,7119388.0,8783980542_17,58,Enchantress,5,1,4,True,True,True,True,False,True,False,False,False,False,True,False
+8783980542,18,3,pick,dire,7119388.0,9247354.0,8783980542_18,108,Underlord,18,8,10,False,True,False,False,False,False,True,False,False,False,False,False
+8783980542,23,3,pick,dire,7119388.0,9247354.0,8783980542_23,13,Puck,3,6,-3,True,True,True,False,True,False,False,False,False,True,False,True
+8783980542,24,3,pick,radiant,9247354.0,7119388.0,8783980542_24,69,Doom,7,5,2,True,True,False,True,False,False,False,False,True,False,False,False
+8783980542,8,1,pick,dire,7119388.0,9247354.0,8783980542_8,114,Monkey King,5,3,2,True,True,True,True,False,True,False,False,False,False,True,False
+8783980542,9,2,pick,radiant,9247354.0,7119388.0,8783980542_9,120,Pangolier,3,2,1,True,True,True,True,True,True,False,False,False,False,False,False
+8784047386,13,2,pick,dire,9247354.0,7119388.0,8784047386_13,123,Hoodwink,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8784047386,14,2,pick,radiant,7119388.0,9247354.0,8784047386_14,110,Phoenix,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8784047386,15,2,pick,radiant,7119388.0,9247354.0,8784047386_15,121,Grimstroke,13,10,3,False,True,False,False,False,False,True,False,False,False,False,False
+8784047386,16,2,pick,dire,9247354.0,7119388.0,8784047386_16,19,Tiny,5,2,3,True,True,True,True,False,True,False,False,False,False,True,False
+8784047386,17,3,pick,dire,9247354.0,7119388.0,8784047386_17,9,Mirana,59,39,20,False,False,False,False,False,False,False,False,False,False,False,False
+8784047386,18,3,pick,radiant,7119388.0,9247354.0,8784047386_18,137,Primal Beast,11,5,6,False,True,False,True,False,False,True,False,True,False,False,False
+8784047386,23,3,pick,radiant,7119388.0,9247354.0,8784047386_23,39,Queen of Pain,1,3,-2,True,True,True,True,True,True,False,False,False,False,False,False
+8784047386,24,3,pick,dire,9247354.0,7119388.0,8784047386_24,69,Doom,5,3,2,True,True,True,True,False,True,False,False,False,False,True,False
+8784047386,8,1,pick,radiant,7119388.0,9247354.0,8784047386_8,114,Monkey King,5,4,1,True,True,True,True,False,False,False,False,False,False,False,False
+8784047386,9,2,pick,dire,9247354.0,7119388.0,8784047386_9,120,Pangolier,3,2,1,True,True,True,True,True,True,False,False,False,False,False,False
+8784176993,13,2,pick,radiant,9467224.0,9572001.0,8784176993_13,123,Hoodwink,2,1,1,True,True,True,True,True,True,False,False,False,False,False,False
+8784176993,14,2,pick,dire,9572001.0,9467224.0,8784176993_14,29,Tidehunter,3,3,0,True,True,True,True,True,True,False,False,False,False,False,False
+8784176993,15,2,pick,dire,9572001.0,9467224.0,8784176993_15,13,Puck,3,4,-1,True,True,True,True,True,False,False,False,False,False,False,True
+8784176993,16,2,pick,radiant,9467224.0,9572001.0,8784176993_16,41,Faceless Void,13,10,3,False,True,False,False,False,False,True,False,False,False,False,False
+8784176993,17,3,pick,radiant,9467224.0,9572001.0,8784176993_17,64,Jakiro,2,3,-1,True,True,True,True,True,True,False,False,False,False,False,False
+8784176993,18,3,pick,dire,9572001.0,9467224.0,8784176993_18,82,Meepo,22,5,17,False,True,False,True,False,False,True,False,True,False,False,False
+8784176993,23,3,pick,dire,9572001.0,9467224.0,8784176993_23,90,Keeper of the Light,18,1,17,False,True,False,True,False,True,True,False,True,False,True,False
+8784176993,24,3,pick,radiant,9467224.0,9572001.0,8784176993_24,126,Void Spirit,7,7,0,True,True,False,False,False,False,False,False,False,False,False,False
+8784176993,8,1,pick,dire,9572001.0,9467224.0,8784176993_8,110,Phoenix,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8784176993,9,2,pick,radiant,9467224.0,9572001.0,8784176993_9,120,Pangolier,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8784255815,13,2,pick,dire,9467224.0,9572001.0,8784255815_13,13,Puck,2,3,-1,True,True,True,True,True,True,False,False,False,False,False,False
+8784255815,14,2,pick,radiant,9572001.0,9467224.0,8784255815_14,99,Bristleback,5,6,-1,True,True,True,False,False,False,False,False,False,True,False,False
+8784255815,15,2,pick,radiant,9572001.0,9467224.0,8784255815_15,106,Ember Spirit,9,6,3,True,True,False,False,False,False,False,False,False,False,False,False
+8784255815,16,2,pick,dire,9467224.0,9572001.0,8784255815_16,86,Rubick,6,5,1,True,True,False,True,False,False,False,False,True,False,False,False
+8784255815,17,3,pick,dire,9467224.0,9572001.0,8784255815_17,37,Warlock,8,3,5,True,True,False,True,False,True,False,False,True,False,True,False
+8784255815,18,3,pick,radiant,9572001.0,9467224.0,8784255815_18,90,Keeper of the Light,14,1,13,False,True,False,True,False,True,True,False,True,False,True,False
+8784255815,23,3,pick,radiant,9572001.0,9467224.0,8784255815_23,109,Terrorblade,7,3,4,True,True,False,True,False,True,False,False,True,False,True,False
+8784255815,24,3,pick,dire,9467224.0,9572001.0,8784255815_24,155,Largo,4,1,3,True,True,True,True,False,True,False,False,False,False,True,False
+8784255815,8,1,pick,radiant,9572001.0,9467224.0,8784255815_8,110,Phoenix,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8784255815,9,2,pick,dire,9467224.0,9572001.0,8784255815_9,70,Ursa,8,13,-5,True,False,False,False,False,False,False,True,False,False,False,False
+8784373796,13,2,pick,radiant,9572001.0,9467224.0,8784373796_13,19,Tiny,51,39,12,False,False,False,False,False,False,False,False,False,False,False,False
+8784373796,14,2,pick,dire,9467224.0,9572001.0,8784373796_14,123,Hoodwink,2,1,1,True,True,True,True,True,True,False,False,False,False,False,False
+8784373796,15,2,pick,dire,9467224.0,9572001.0,8784373796_15,21,Windranger,22,21,1,False,False,False,False,False,False,False,False,False,False,False,False
+8784373796,16,2,pick,radiant,9572001.0,9467224.0,8784373796_16,86,Rubick,2,1,1,True,True,True,True,True,True,False,False,False,False,False,False
+8784373796,17,3,pick,radiant,9572001.0,9467224.0,8784373796_17,51,Clockwerk,53,54,-1,False,False,False,False,False,False,False,False,False,False,False,False
+8784373796,18,3,pick,dire,9467224.0,9572001.0,8784373796_18,38,Beastmaster,2,2,0,True,True,True,True,True,True,False,False,False,False,False,False
+8784373796,23,3,pick,dire,9467224.0,9572001.0,8784373796_23,40,Venomancer,23,7,16,False,True,False,False,False,False,True,False,False,False,False,False
+8784373796,24,3,pick,radiant,9572001.0,9467224.0,8784373796_24,94,Medusa,49,31,18,False,False,False,False,False,False,False,False,False,False,False,False
+8784373796,8,1,pick,dire,9467224.0,9572001.0,8784373796_8,13,Puck,2,2,0,True,True,True,True,True,True,False,False,False,False,False,False
+8784373796,9,2,pick,radiant,9572001.0,9467224.0,8784373796_9,60,Night Stalker,32,41,-9,False,False,False,False,False,False,False,False,False,False,False,False
+8784508335,13,2,pick,radiant,2163.0,8255888.0,8784508335_13,135,Dawnbreaker,55,34,21,False,False,False,False,False,False,False,False,False,False,False,False
+8784508335,14,2,pick,dire,8255888.0,2163.0,8784508335_14,54,Lifestealer,25,28,-3,False,False,False,False,False,False,False,False,False,False,False,False
+8784508335,15,2,pick,dire,8255888.0,2163.0,8784508335_15,31,Lich,2,1,1,True,True,True,True,True,True,False,False,False,False,False,False
+8784508335,16,2,pick,radiant,2163.0,8255888.0,8784508335_16,100,Tusk,7,7,0,True,True,False,False,False,False,False,False,False,False,False,False
+8784508335,17,3,pick,radiant,2163.0,8255888.0,8784508335_17,19,Tiny,3,1,2,True,True,True,True,True,True,False,False,False,False,False,False
+8784508335,18,3,pick,dire,8255888.0,2163.0,8784508335_18,106,Ember Spirit,2,2,0,True,True,True,True,True,True,False,False,False,False,False,False
+8784508335,23,3,pick,dire,8255888.0,2163.0,8784508335_23,98,Timbersaw,20,9,11,False,True,False,False,False,False,True,False,False,False,False,False
+8784508335,24,3,pick,radiant,2163.0,8255888.0,8784508335_24,39,Queen of Pain,4,3,1,True,True,True,True,False,True,False,False,False,False,True,False
+8784508335,8,1,pick,dire,8255888.0,2163.0,8784508335_8,86,Rubick,2,2,0,True,True,True,True,True,True,False,False,False,False,False,False
+8784508335,9,2,pick,radiant,2163.0,8255888.0,8784508335_9,110,Phoenix,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8784597508,13,2,pick,radiant,8255888.0,2163.0,8784597508_13,39,Queen of Pain,4,5,-1,True,True,True,True,False,False,False,False,False,False,False,False
+8784597508,14,2,pick,dire,2163.0,8255888.0,8784597508_14,111,Oracle,23,21,2,False,False,False,False,False,False,False,False,False,False,False,False
+8784597508,15,2,pick,dire,2163.0,8255888.0,8784597508_15,26,Lion,4,4,0,True,True,True,True,False,False,False,False,False,False,False,False
+8784597508,16,2,pick,radiant,8255888.0,2163.0,8784597508_16,21,Windranger,11,8,3,False,True,False,False,False,False,True,False,False,False,False,False
+8784597508,17,3,pick,radiant,8255888.0,2163.0,8784597508_17,112,Winter Wyvern,16,8,8,False,True,False,False,False,False,True,False,False,False,False,False
+8784597508,18,3,pick,dire,2163.0,8255888.0,8784597508_18,59,Huskar,8,8,0,True,True,False,False,False,False,False,False,False,False,False,False
+8784597508,23,3,pick,dire,2163.0,8255888.0,8784597508_23,155,Largo,11,4,7,False,True,False,True,False,False,True,False,True,False,False,False
+8784597508,24,3,pick,radiant,8255888.0,2163.0,8784597508_24,145,Kez,5,2,3,True,True,True,True,False,True,False,False,False,False,True,False
+8784597508,8,1,pick,dire,2163.0,8255888.0,8784597508_8,73,Alchemist,2,2,0,True,True,True,True,True,True,False,False,False,False,False,False
+8784597508,9,2,pick,radiant,8255888.0,2163.0,8784597508_9,29,Tidehunter,12,16,-4,False,False,False,False,False,False,False,False,False,False,False,False
+8784700248,13,2,pick,radiant,2163.0,8255888.0,8784700248_13,110,Phoenix,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8784700248,14,2,pick,dire,8255888.0,2163.0,8784700248_14,145,Kez,17,15,2,False,False,False,False,False,False,False,False,False,False,False,False
+8784700248,15,2,pick,dire,8255888.0,2163.0,8784700248_15,112,Winter Wyvern,10,4,6,True,True,False,True,False,False,False,False,True,False,False,False
+8784700248,16,2,pick,radiant,2163.0,8255888.0,8784700248_16,19,Tiny,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8784700248,17,3,pick,radiant,2163.0,8255888.0,8784700248_17,26,Lion,4,3,1,True,True,True,True,False,True,False,False,False,False,True,False
+8784700248,18,3,pick,dire,8255888.0,2163.0,8784700248_18,29,Tidehunter,4,2,2,True,True,True,True,False,True,False,False,False,False,True,False
+8784700248,23,3,pick,dire,8255888.0,2163.0,8784700248_23,39,Queen of Pain,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8784700248,24,3,pick,radiant,2163.0,8255888.0,8784700248_24,126,Void Spirit,5,2,3,True,True,True,True,False,True,False,False,False,False,True,False
+8784700248,8,1,pick,dire,8255888.0,2163.0,8784700248_8,86,Rubick,2,2,0,True,True,True,True,True,True,False,False,False,False,False,False
+8784700248,9,2,pick,radiant,2163.0,8255888.0,8784700248_9,135,Dawnbreaker,32,32,0,False,False,False,False,False,False,False,False,False,False,False,False
+8785243904,13,2,pick,dire,9247354.0,9572001.0,8785243904_13,86,Rubick,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8785243904,14,2,pick,radiant,9572001.0,9247354.0,8785243904_14,114,Monkey King,4,10,-6,True,True,True,False,False,False,False,False,False,True,False,False
+8785243904,15,2,pick,radiant,9572001.0,9247354.0,8785243904_15,69,Doom,8,14,-6,True,False,False,False,False,False,False,True,False,False,False,False
+8785243904,16,2,pick,dire,9247354.0,9572001.0,8785243904_16,110,Phoenix,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8785243904,17,3,pick,dire,9247354.0,9572001.0,8785243904_17,38,Beastmaster,3,1,2,True,True,True,True,True,True,False,False,False,False,False,False
+8785243904,18,3,pick,radiant,9572001.0,9247354.0,8785243904_18,58,Enchantress,8,3,5,True,True,False,True,False,True,False,False,True,False,True,False
+8785243904,23,3,pick,radiant,9572001.0,9247354.0,8785243904_23,131,Ringmaster,49,14,35,False,False,False,False,False,False,False,False,False,False,False,False
+8785243904,24,3,pick,dire,9247354.0,9572001.0,8785243904_24,47,Viper,10,7,3,True,True,False,False,False,False,False,False,False,False,False,False
+8785243904,8,1,pick,radiant,9572001.0,9247354.0,8785243904_8,39,Queen of Pain,12,13,-1,False,False,False,False,False,False,False,False,False,False,False,False
+8785243904,9,2,pick,dire,9247354.0,9572001.0,8785243904_9,73,Alchemist,8,8,0,True,True,False,False,False,False,False,False,False,False,False,False
+8785317017,13,2,pick,dire,9572001.0,9247354.0,8785317017_13,39,Queen of Pain,14,15,-1,False,False,False,False,False,False,False,False,False,False,False,False
+8785317017,14,2,pick,radiant,9247354.0,9572001.0,8785317017_14,86,Rubick,1,2,-1,True,True,True,True,True,True,False,False,False,False,False,False
+8785317017,15,2,pick,radiant,9247354.0,9572001.0,8785317017_15,126,Void Spirit,5,10,-5,True,True,True,False,False,False,False,False,False,True,False,False
+8785317017,16,2,pick,dire,9572001.0,9247354.0,8785317017_16,114,Monkey King,2,2,0,True,True,True,True,True,True,False,False,False,False,False,False
+8785317017,17,3,pick,dire,9572001.0,9247354.0,8785317017_17,36,Necrophos,32,47,-15,False,False,False,False,False,False,False,False,False,False,False,False
+8785317017,18,3,pick,radiant,9247354.0,9572001.0,8785317017_18,75,Silencer,28,13,15,False,False,False,False,False,False,False,False,False,False,False,False
+8785317017,23,3,pick,radiant,9247354.0,9572001.0,8785317017_23,69,Doom,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8785317017,24,3,pick,dire,9572001.0,9247354.0,8785317017_24,80,Lone Druid,94,101,-7,False,False,False,False,False,False,False,False,False,False,False,False
+8785317017,8,1,pick,radiant,9247354.0,9572001.0,8785317017_8,19,Tiny,21,18,3,False,False,False,False,False,False,False,False,False,False,False,False
+8785317017,9,2,pick,dire,9572001.0,9247354.0,8785317017_9,110,Phoenix,2,3,-1,True,True,True,True,True,True,False,False,False,False,False,False
+8785399798,13,2,pick,radiant,2163.0,10108947.0,8785399798_13,38,Beastmaster,3,3,0,True,True,True,True,True,True,False,False,False,False,False,False
+8785399798,14,2,pick,dire,10108947.0,2163.0,8785399798_14,100,Tusk,13,10,3,False,True,False,False,False,False,True,False,False,False,False,False
+8785399798,15,2,pick,dire,10108947.0,2163.0,8785399798_15,131,Ringmaster,8,6,2,True,True,False,False,False,False,False,False,False,False,False,False
+8785399798,16,2,pick,radiant,2163.0,10108947.0,8785399798_16,110,Phoenix,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8785399798,17,3,pick,radiant,2163.0,10108947.0,8785399798_17,120,Pangolier,2,3,-1,True,True,True,True,True,True,False,False,False,False,False,False
+8785399798,18,3,pick,dire,10108947.0,2163.0,8785399798_18,23,Kunkka,2,4,-2,True,True,True,True,True,False,False,False,False,False,False,True
+8785399798,23,3,pick,dire,10108947.0,2163.0,8785399798_23,19,Tiny,2,8,-6,True,True,True,False,True,False,False,False,False,True,False,True
+8785399798,24,3,pick,radiant,2163.0,10108947.0,8785399798_24,39,Queen of Pain,4,27,-23,True,False,True,False,False,False,False,True,False,True,False,False
+8785399798,8,1,pick,dire,10108947.0,2163.0,8785399798_8,47,Viper,6,10,-4,True,True,False,False,False,False,False,False,False,False,False,False
+8785399798,9,2,pick,radiant,2163.0,10108947.0,8785399798_9,86,Rubick,5,5,0,True,True,True,True,False,False,False,False,False,False,False,False
+8785463098,13,2,pick,radiant,10108947.0,2163.0,8785463098_13,28,Slardar,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8785463098,14,2,pick,dire,2163.0,10108947.0,8785463098_14,21,Windranger,3,2,1,True,True,True,True,True,True,False,False,False,False,False,False
+8785463098,15,2,pick,dire,2163.0,10108947.0,8785463098_15,108,Underlord,2,1,1,True,True,True,True,True,True,False,False,False,False,False,False
+8785463098,16,2,pick,radiant,10108947.0,2163.0,8785463098_16,145,Kez,29,19,10,False,False,False,False,False,False,False,False,False,False,False,False
+8785463098,17,3,pick,radiant,10108947.0,2163.0,8785463098_17,79,Shadow Demon,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8785463098,18,3,pick,dire,2163.0,10108947.0,8785463098_18,39,Queen of Pain,6,5,1,True,True,False,True,False,False,False,False,True,False,False,False
+8785463098,23,3,pick,dire,2163.0,10108947.0,8785463098_23,100,Tusk,19,7,12,False,True,False,False,False,False,True,False,False,False,False,False
+8785463098,24,3,pick,radiant,10108947.0,2163.0,8785463098_24,47,Viper,4,1,3,True,True,True,True,False,True,False,False,False,False,True,False
+8785463098,8,1,pick,dire,2163.0,10108947.0,8785463098_8,123,Hoodwink,3,3,0,True,True,True,True,True,True,False,False,False,False,False,False
+8785463098,9,2,pick,radiant,10108947.0,2163.0,8785463098_9,110,Phoenix,1,2,-1,True,True,True,True,True,True,False,False,False,False,False,False
+8785561247,13,2,pick,radiant,9467224.0,8255888.0,8785561247_13,110,Phoenix,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8785561247,14,2,pick,dire,8255888.0,9467224.0,8785561247_14,21,Windranger,16,14,2,False,False,False,False,False,False,False,False,False,False,False,False
+8785561247,15,2,pick,dire,8255888.0,9467224.0,8785561247_15,120,Pangolier,2,8,-6,True,True,True,False,True,False,False,False,False,True,False,True
+8785561247,16,2,pick,radiant,9467224.0,8255888.0,8785561247_16,129,Mars,10,5,5,True,True,False,True,False,False,False,False,True,False,False,False
+8785561247,17,3,pick,radiant,9467224.0,8255888.0,8785561247_17,19,Tiny,6,3,3,True,True,False,True,False,True,False,False,True,False,True,False
+8785561247,18,3,pick,dire,8255888.0,9467224.0,8785561247_18,135,Dawnbreaker,4,7,-3,True,True,True,False,False,False,False,False,False,True,False,False
+8785561247,23,3,pick,dire,8255888.0,9467224.0,8785561247_23,111,Oracle,83,24,59,False,False,False,False,False,False,False,False,False,False,False,False
+8785561247,24,3,pick,radiant,9467224.0,8255888.0,8785561247_24,26,Lion,73,15,58,False,False,False,False,False,False,False,False,False,False,False,False
+8785561247,8,1,pick,dire,8255888.0,9467224.0,8785561247_8,114,Monkey King,3,3,0,True,True,True,True,True,True,False,False,False,False,False,False
+8785561247,9,2,pick,radiant,9467224.0,8255888.0,8785561247_9,39,Queen of Pain,17,14,3,False,False,False,False,False,False,False,False,False,False,False,False
+8785712176,13,2,pick,radiant,8255888.0,9467224.0,8785712176_13,13,Puck,17,5,12,False,True,False,True,False,False,True,False,True,False,False,False
+8785712176,14,2,pick,dire,9467224.0,8255888.0,8785712176_14,37,Warlock,6,2,4,True,True,False,True,False,True,False,False,True,False,True,False
+8785712176,15,2,pick,dire,9467224.0,8255888.0,8785712176_15,126,Void Spirit,17,7,10,False,True,False,False,False,False,True,False,False,False,False,False
+8785712176,16,2,pick,radiant,8255888.0,9467224.0,8785712176_16,99,Bristleback,13,11,2,False,False,False,False,False,False,False,False,False,False,False,False
+8785712176,17,3,pick,radiant,8255888.0,9467224.0,8785712176_17,75,Silencer,5,1,4,True,True,True,True,False,True,False,False,False,False,True,False
+8785712176,18,3,pick,dire,9467224.0,8255888.0,8785712176_18,19,Tiny,3,9,-6,True,True,True,False,True,False,False,False,False,True,False,True
+8785712176,23,3,pick,dire,9467224.0,8255888.0,8785712176_23,129,Mars,10,2,8,True,True,False,True,False,True,False,False,True,False,True,False
+8785712176,24,3,pick,radiant,8255888.0,9467224.0,8785712176_24,41,Faceless Void,4,2,2,True,True,True,True,False,True,False,False,False,False,True,False
+8785712176,8,1,pick,dire,9467224.0,8255888.0,8785712176_8,86,Rubick,2,3,-1,True,True,True,True,True,True,False,False,False,False,False,False
+8785712176,9,2,pick,radiant,8255888.0,9467224.0,8785712176_9,123,Hoodwink,3,3,0,True,True,True,True,True,True,False,False,False,False,False,False
+8785812275,13,2,pick,radiant,8255888.0,9467224.0,8785812275_13,123,Hoodwink,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8785812275,14,2,pick,dire,9467224.0,8255888.0,8785812275_14,129,Mars,17,16,1,False,False,False,False,False,False,False,False,False,False,False,False
+8785812275,15,2,pick,dire,9467224.0,8255888.0,8785812275_15,37,Warlock,1,2,-1,True,True,True,True,True,True,False,False,False,False,False,False
+8785812275,16,2,pick,radiant,8255888.0,9467224.0,8785812275_16,59,Huskar,33,41,-8,False,False,False,False,False,False,False,False,False,False,False,False
+8785812275,17,3,pick,radiant,8255888.0,9467224.0,8785812275_17,111,Oracle,23,16,7,False,False,False,False,False,False,False,False,False,False,False,False
+8785812275,18,3,pick,dire,9467224.0,8255888.0,8785812275_18,70,Ursa,2,1,1,True,True,True,True,True,True,False,False,False,False,False,False
+8785812275,23,3,pick,dire,9467224.0,8255888.0,8785812275_23,105,Techies,81,21,60,False,False,False,False,False,False,False,False,False,False,False,False
+8785812275,24,3,pick,radiant,8255888.0,9467224.0,8785812275_24,65,Batrider,17,18,-1,False,False,False,False,False,False,False,False,False,False,False,False
+8785812275,8,1,pick,dire,9467224.0,8255888.0,8785812275_8,13,Puck,4,3,1,True,True,True,True,False,True,False,False,False,False,True,False
+8785812275,9,2,pick,radiant,8255888.0,9467224.0,8785812275_9,114,Monkey King,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8785918300,13,2,pick,radiant,9247354.0,2163.0,8785918300_13,65,Batrider,4,3,1,True,True,True,True,False,True,False,False,False,False,True,False
+8785918300,14,2,pick,dire,2163.0,9247354.0,8785918300_14,86,Rubick,2,3,-1,True,True,True,True,True,True,False,False,False,False,False,False
+8785918300,15,2,pick,dire,2163.0,9247354.0,8785918300_15,123,Hoodwink,3,5,-2,True,True,True,True,True,False,False,False,False,False,False,True
+8785918300,16,2,pick,radiant,9247354.0,2163.0,8785918300_16,75,Silencer,1,3,-2,True,True,True,True,True,True,False,False,False,False,False,False
+8785918300,17,3,pick,radiant,9247354.0,2163.0,8785918300_17,51,Clockwerk,41,87,-46,False,False,False,False,False,False,False,False,False,False,False,False
+8785918300,18,3,pick,dire,2163.0,9247354.0,8785918300_18,13,Puck,2,8,-6,True,True,True,False,True,False,False,False,False,True,False,True
+8785918300,23,3,pick,dire,2163.0,9247354.0,8785918300_23,53,Nature's Prophet,5,10,-5,True,True,True,False,False,False,False,False,False,True,False,False
+8785918300,24,3,pick,radiant,9247354.0,2163.0,8785918300_24,135,Dawnbreaker,13,8,5,False,True,False,False,False,False,True,False,False,False,False,False
+8785918300,8,1,pick,dire,2163.0,9247354.0,8785918300_8,120,Pangolier,3,3,0,True,True,True,True,True,True,False,False,False,False,False,False
+8785918300,9,2,pick,radiant,9247354.0,2163.0,8785918300_9,19,Tiny,10,8,2,True,True,False,False,False,False,False,False,False,False,False,False
+8786038067,13,2,pick,dire,9247354.0,2163.0,8786038067_13,110,Phoenix,4,3,1,True,True,True,True,False,True,False,False,False,False,True,False
+8786038067,14,2,pick,radiant,2163.0,9247354.0,8786038067_14,91,Io,2,3,-1,True,True,True,True,True,True,False,False,False,False,False,False
+8786038067,15,2,pick,radiant,2163.0,9247354.0,8786038067_15,145,Kez,14,8,6,False,True,False,False,False,False,True,False,False,False,False,False
+8786038067,16,2,pick,dire,9247354.0,2163.0,8786038067_16,99,Bristleback,3,2,1,True,True,True,True,True,True,False,False,False,False,False,False
+8786038067,17,3,pick,dire,9247354.0,2163.0,8786038067_17,123,Hoodwink,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8786038067,18,3,pick,radiant,2163.0,9247354.0,8786038067_18,39,Queen of Pain,3,3,0,True,True,True,True,True,True,False,False,False,False,False,False
+8786038067,23,3,pick,radiant,2163.0,9247354.0,8786038067_23,105,Techies,12,34,-22,False,False,False,False,False,False,False,False,False,False,False,False
+8786038067,24,3,pick,dire,9247354.0,2163.0,8786038067_24,106,Ember Spirit,8,3,5,True,True,False,True,False,True,False,False,True,False,True,False
+8786038067,8,1,pick,radiant,2163.0,9247354.0,8786038067_8,65,Batrider,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8786038067,9,2,pick,dire,9247354.0,2163.0,8786038067_9,19,Tiny,10,7,3,True,True,False,False,False,False,False,False,False,False,False,False
+8786127499,13,2,pick,radiant,9247354.0,2163.0,8786127499_13,19,Tiny,6,6,0,True,True,False,False,False,False,False,False,False,False,False,False
+8786127499,14,2,pick,dire,2163.0,9247354.0,8786127499_14,39,Queen of Pain,9,12,-3,True,False,False,False,False,False,False,True,False,False,False,False
+8786127499,15,2,pick,dire,2163.0,9247354.0,8786127499_15,111,Oracle,19,12,7,False,False,False,False,False,False,False,False,False,False,False,False
+8786127499,16,2,pick,radiant,9247354.0,2163.0,8786127499_16,86,Rubick,2,3,-1,True,True,True,True,True,True,False,False,False,False,False,False
+8786127499,17,3,pick,radiant,9247354.0,2163.0,8786127499_17,69,Doom,5,2,3,True,True,True,True,False,True,False,False,False,False,True,False
+8786127499,18,3,pick,dire,2163.0,9247354.0,8786127499_18,114,Monkey King,6,10,-4,True,True,False,False,False,False,False,False,False,False,False,False
+8786127499,23,3,pick,dire,2163.0,9247354.0,8786127499_23,91,Io,28,66,-38,False,False,False,False,False,False,False,False,False,False,False,False
+8786127499,24,3,pick,radiant,9247354.0,2163.0,8786127499_24,16,Sand King,5,1,4,True,True,True,True,False,True,False,False,False,False,True,False
+8786127499,8,1,pick,dire,2163.0,9247354.0,8786127499_8,65,Batrider,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8786127499,9,2,pick,radiant,9247354.0,2163.0,8786127499_9,75,Silencer,22,12,10,False,False,False,False,False,False,False,False,False,False,False,False
+8786827560,13,2,pick,radiant,9247354.0,9467224.0,8786827560_13,65,Batrider,6,1,5,True,True,False,True,False,True,False,False,True,False,True,False
+8786827560,14,2,pick,dire,9467224.0,9247354.0,8786827560_14,26,Lion,29,18,11,False,False,False,False,False,False,False,False,False,False,False,False
+8786827560,15,2,pick,dire,9467224.0,9247354.0,8786827560_15,17,Storm Spirit,10,8,2,True,True,False,False,False,False,False,False,False,False,False,False
+8786827560,16,2,pick,radiant,9247354.0,9467224.0,8786827560_16,75,Silencer,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8786827560,17,3,pick,radiant,9247354.0,9467224.0,8786827560_17,99,Bristleback,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8786827560,18,3,pick,dire,9467224.0,9247354.0,8786827560_18,155,Largo,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8786827560,23,3,pick,dire,9467224.0,9247354.0,8786827560_23,37,Warlock,10,1,9,True,True,False,True,False,True,False,False,True,False,True,False
+8786827560,24,3,pick,radiant,9247354.0,9467224.0,8786827560_24,42,Wraith King,87,56,31,False,False,False,False,False,False,False,False,False,False,False,False
+8786827560,8,1,pick,dire,9467224.0,9247354.0,8786827560_8,80,Lone Druid,6,8,-2,True,True,False,False,False,False,False,False,False,False,False,False
+8786827560,9,2,pick,radiant,9247354.0,9467224.0,8786827560_9,120,Pangolier,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8786902529,13,2,pick,dire,9247354.0,9467224.0,8786902529_13,65,Batrider,7,4,3,True,True,False,True,False,False,False,False,True,False,False,False
+8786902529,14,2,pick,radiant,9467224.0,9247354.0,8786902529_14,13,Puck,2,2,0,True,True,True,True,True,True,False,False,False,False,False,False
+8786902529,15,2,pick,radiant,9467224.0,9247354.0,8786902529_15,155,Largo,6,7,-1,True,True,False,False,False,False,False,False,False,False,False,False
+8786902529,16,2,pick,dire,9247354.0,9467224.0,8786902529_16,75,Silencer,2,5,-3,True,True,True,True,True,False,False,False,False,False,False,True
+8786902529,17,3,pick,dire,9247354.0,9467224.0,8786902529_17,145,Kez,24,17,7,False,False,False,False,False,False,False,False,False,False,False,False
+8786902529,18,3,pick,radiant,9467224.0,9247354.0,8786902529_18,41,Faceless Void,4,1,3,True,True,True,True,False,True,False,False,False,False,True,False
+8786902529,23,3,pick,radiant,9467224.0,9247354.0,8786902529_23,40,Venomancer,7,3,4,True,True,False,True,False,True,False,False,True,False,True,False
+8786902529,24,3,pick,dire,9247354.0,9467224.0,8786902529_24,2,Axe,24,14,10,False,False,False,False,False,False,False,False,False,False,False,False
+8786902529,8,1,pick,radiant,9467224.0,9247354.0,8786902529_8,86,Rubick,3,4,-1,True,True,True,True,True,False,False,False,False,False,False,True
+8786902529,9,2,pick,dire,9247354.0,9467224.0,8786902529_9,123,Hoodwink,2,4,-2,True,True,True,True,True,False,False,False,False,False,False,True
+8787054928,13,2,pick,radiant,8255888.0,9467224.0,8787054928_13,21,Windranger,21,12,9,False,False,False,False,False,False,False,False,False,False,False,False
+8787054928,14,2,pick,dire,9467224.0,8255888.0,8787054928_14,39,Queen of Pain,21,14,7,False,False,False,False,False,False,False,False,False,False,False,False
+8787054928,15,2,pick,dire,9467224.0,8255888.0,8787054928_15,37,Warlock,1,2,-1,True,True,True,True,True,True,False,False,False,False,False,False
+8787054928,16,2,pick,radiant,8255888.0,9467224.0,8787054928_16,138,Muerta,14,13,1,False,False,False,False,False,False,False,False,False,False,False,False
+8787054928,17,3,pick,radiant,8255888.0,9467224.0,8787054928_17,100,Tusk,13,10,3,False,True,False,False,False,False,True,False,False,False,False,False
+8787054928,18,3,pick,dire,9467224.0,8255888.0,8787054928_18,41,Faceless Void,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8787054928,23,3,pick,dire,9467224.0,8255888.0,8787054928_23,155,Largo,2,1,1,True,True,True,True,True,True,False,False,False,False,False,False
+8787054928,24,3,pick,radiant,8255888.0,9467224.0,8787054928_24,33,Enigma,61,35,26,False,False,False,False,False,False,False,False,False,False,False,False
+8787054928,8,1,pick,dire,9467224.0,8255888.0,8787054928_8,123,Hoodwink,4,4,0,True,True,True,True,False,False,False,False,False,False,False,False
+8787054928,9,2,pick,radiant,8255888.0,9467224.0,8787054928_9,120,Pangolier,2,2,0,True,True,True,True,True,True,False,False,False,False,False,False
+8787185127,13,2,pick,radiant,9467224.0,8255888.0,8787185127_13,26,Lion,25,15,10,False,False,False,False,False,False,False,False,False,False,False,False
+8787185127,14,2,pick,dire,8255888.0,9467224.0,8787185127_14,75,Silencer,3,5,-2,True,True,True,True,True,False,False,False,False,False,False,True
+8787185127,15,2,pick,dire,8255888.0,9467224.0,8787185127_15,120,Pangolier,1,5,-4,True,True,True,True,True,False,False,False,False,False,False,True
+8787185127,16,2,pick,radiant,9467224.0,8255888.0,8787185127_16,129,Mars,8,5,3,True,True,False,True,False,False,False,False,True,False,False,False
+8787185127,17,3,pick,radiant,9467224.0,8255888.0,8787185127_17,37,Warlock,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8787185127,18,3,pick,dire,8255888.0,9467224.0,8787185127_18,29,Tidehunter,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8787185127,23,3,pick,dire,8255888.0,9467224.0,8787185127_23,131,Ringmaster,24,5,19,False,True,False,True,False,False,True,False,True,False,False,False
+8787185127,24,3,pick,radiant,9467224.0,8255888.0,8787185127_24,69,Doom,8,6,2,True,True,False,False,False,False,False,False,False,False,False,False
+8787185127,8,1,pick,dire,8255888.0,9467224.0,8787185127_8,114,Monkey King,3,3,0,True,True,True,True,True,True,False,False,False,False,False,False
+8787185127,9,2,pick,radiant,9467224.0,8255888.0,8787185127_9,39,Queen of Pain,11,5,6,False,True,False,True,False,False,True,False,True,False,False,False
+8787299097,13,2,pick,radiant,8255888.0,9467224.0,8787299097_13,21,Windranger,12,10,2,False,True,False,False,False,False,True,False,False,False,False,False
+8787299097,14,2,pick,dire,9467224.0,8255888.0,8787299097_14,19,Tiny,16,7,9,False,True,False,False,False,False,True,False,False,False,False,False
+8787299097,15,2,pick,dire,9467224.0,8255888.0,8787299097_15,37,Warlock,1,2,-1,True,True,True,True,True,True,False,False,False,False,False,False
+8787299097,16,2,pick,radiant,8255888.0,9467224.0,8787299097_16,100,Tusk,2,6,-4,True,True,True,False,True,False,False,False,False,True,False,True
+8787299097,17,3,pick,radiant,8255888.0,9467224.0,8787299097_17,138,Muerta,13,18,-5,False,False,False,False,False,False,False,False,False,False,False,False
+8787299097,18,3,pick,dire,9467224.0,8255888.0,8787299097_18,108,Underlord,4,6,-2,True,True,True,False,False,False,False,False,False,True,False,False
+8787299097,23,3,pick,dire,9467224.0,8255888.0,8787299097_23,106,Ember Spirit,2,1,1,True,True,True,True,True,True,False,False,False,False,False,False
+8787299097,24,3,pick,radiant,8255888.0,9467224.0,8787299097_24,155,Largo,30,10,20,False,True,False,False,False,False,True,False,False,False,False,False
+8787299097,8,1,pick,dire,9467224.0,8255888.0,8787299097_8,123,Hoodwink,3,3,0,True,True,True,True,True,True,False,False,False,False,False,False
+8787299097,9,2,pick,radiant,8255888.0,9467224.0,8787299097_9,13,Puck,18,14,4,False,False,False,False,False,False,False,False,False,False,False,False
+8793065730,13,2,pick,radiant,8261500.0,9885310.0,8793065730_13,123,Hoodwink,3,3,0,True,True,True,True,True,True,False,False,False,False,False,False
+8793065730,14,2,pick,dire,9885310.0,8261500.0,8793065730_14,86,Rubick,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8793065730,15,2,pick,dire,9885310.0,8261500.0,8793065730_15,40,Venomancer,3,4,-1,True,True,True,True,True,False,False,False,False,False,False,True
+8793065730,16,2,pick,radiant,8261500.0,9885310.0,8793065730_16,69,Doom,4,8,-4,True,True,True,False,False,False,False,False,False,True,False,False
+8793065730,17,3,pick,radiant,8261500.0,9885310.0,8793065730_17,83,Treant Protector,8,3,5,True,True,False,True,False,True,False,False,True,False,True,False
+8793065730,18,3,pick,dire,9885310.0,8261500.0,8793065730_18,39,Queen of Pain,7,7,0,True,True,False,False,False,False,False,False,False,False,False,False
+8793065730,23,3,pick,dire,9885310.0,8261500.0,8793065730_23,135,Dawnbreaker,52,41,11,False,False,False,False,False,False,False,False,False,False,False,False
+8793065730,24,3,pick,radiant,8261500.0,9885310.0,8793065730_24,138,Muerta,6,10,-4,True,True,False,False,False,False,False,False,False,False,False,False
+8793065730,8,1,pick,dire,9885310.0,8261500.0,8793065730_8,38,Beastmaster,6,6,0,True,True,False,False,False,False,False,False,False,False,False,False
+8793065730,9,2,pick,radiant,8261500.0,9885310.0,8793065730_9,16,Sand King,4,4,0,True,True,True,True,False,False,False,False,False,False,False,False
+8793265942,13,2,pick,radiant,8261500.0,9351740.0,8793265942_13,86,Rubick,1,2,-1,True,True,True,True,True,True,False,False,False,False,False,False
+8793265942,14,2,pick,dire,9351740.0,8261500.0,8793265942_14,58,Enchantress,4,5,-1,True,True,True,True,False,False,False,False,False,False,False,False
+8793265942,15,2,pick,dire,9351740.0,8261500.0,8793265942_15,73,Alchemist,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8793265942,16,2,pick,radiant,8261500.0,9351740.0,8793265942_16,29,Tidehunter,16,27,-11,False,False,False,False,False,False,False,False,False,False,False,False
+8793265942,17,3,pick,radiant,8261500.0,9351740.0,8793265942_17,112,Winter Wyvern,92,60,32,False,False,False,False,False,False,False,False,False,False,False,False
+8793265942,18,3,pick,dire,9351740.0,8261500.0,8793265942_18,13,Puck,7,9,-2,True,True,False,False,False,False,False,False,False,False,False,False
+8793265942,23,3,pick,dire,9351740.0,8261500.0,8793265942_23,50,Dazzle,39,38,1,False,False,False,False,False,False,False,False,False,False,False,False
+8793265942,24,3,pick,radiant,8261500.0,9351740.0,8793265942_24,109,Terrorblade,7,3,4,True,True,False,True,False,True,False,False,True,False,True,False
+8793265942,8,1,pick,dire,9351740.0,8261500.0,8793265942_8,120,Pangolier,3,3,0,True,True,True,True,True,True,False,False,False,False,False,False
+8793265942,9,2,pick,radiant,8261500.0,9351740.0,8793265942_9,38,Beastmaster,13,9,4,False,True,False,False,False,False,True,False,False,False,False,False
+8793358954,13,2,pick,radiant,9351740.0,8261500.0,8793358954_13,86,Rubick,4,5,-1,True,True,True,True,False,False,False,False,False,False,False,False
+8793358954,14,2,pick,dire,8261500.0,9351740.0,8793358954_14,83,Treant Protector,13,11,2,False,False,False,False,False,False,False,False,False,False,False,False
+8793358954,15,2,pick,dire,8261500.0,9351740.0,8793358954_15,21,Windranger,65,54,11,False,False,False,False,False,False,False,False,False,False,False,False
+8793358954,16,2,pick,radiant,9351740.0,8261500.0,8793358954_16,120,Pangolier,6,7,-1,True,True,False,False,False,False,False,False,False,False,False,False
+8793358954,17,3,pick,radiant,9351740.0,8261500.0,8793358954_17,145,Kez,21,14,7,False,False,False,False,False,False,False,False,False,False,False,False
+8793358954,18,3,pick,dire,8261500.0,9351740.0,8793358954_18,34,Tinker,31,36,-5,False,False,False,False,False,False,False,False,False,False,False,False
+8793358954,23,3,pick,dire,8261500.0,9351740.0,8793358954_23,2,Axe,66,16,50,False,False,False,False,False,False,False,False,False,False,False,False
+8793358954,24,3,pick,radiant,9351740.0,8261500.0,8793358954_24,37,Warlock,44,13,31,False,False,False,False,False,False,False,False,False,False,False,False
+8793358954,8,1,pick,dire,8261500.0,9351740.0,8793358954_8,80,Lone Druid,21,24,-3,False,False,False,False,False,False,False,False,False,False,False,False
+8793358954,9,2,pick,radiant,9351740.0,8261500.0,8793358954_9,108,Underlord,22,28,-6,False,False,False,False,False,False,False,False,False,False,False,False
+8794678244,13,2,pick,radiant,5017210.0,8261500.0,8794678244_13,120,Pangolier,4,3,1,True,True,True,True,False,True,False,False,False,False,True,False
+8794678244,14,2,pick,dire,8261500.0,5017210.0,8794678244_14,29,Tidehunter,6,9,-3,True,True,False,False,False,False,False,False,False,False,False,False
+8794678244,15,2,pick,dire,8261500.0,5017210.0,8794678244_15,21,Windranger,17,12,5,False,False,False,False,False,False,False,False,False,False,False,False
+8794678244,16,2,pick,radiant,5017210.0,8261500.0,8794678244_16,19,Tiny,11,5,6,False,True,False,True,False,False,True,False,True,False,False,False
+8794678244,17,3,pick,radiant,5017210.0,8261500.0,8794678244_17,110,Phoenix,1,2,-1,True,True,True,True,True,True,False,False,False,False,False,False
+8794678244,18,3,pick,dire,8261500.0,5017210.0,8794678244_18,73,Alchemist,13,8,5,False,True,False,False,False,False,True,False,False,False,False,False
+8794678244,23,3,pick,dire,8261500.0,5017210.0,8794678244_23,17,Storm Spirit,8,3,5,True,True,False,True,False,True,False,False,True,False,True,False
+8794678244,24,3,pick,radiant,5017210.0,8261500.0,8794678244_24,98,Timbersaw,16,17,-1,False,False,False,False,False,False,False,False,False,False,False,False
+8794678244,8,1,pick,dire,8261500.0,5017210.0,8794678244_8,112,Winter Wyvern,31,30,1,False,False,False,False,False,False,False,False,False,False,False,False
+8794678244,9,2,pick,radiant,5017210.0,8261500.0,8794678244_9,86,Rubick,3,3,0,True,True,True,True,True,True,False,False,False,False,False,False
+8794744726,13,2,pick,radiant,8261500.0,5017210.0,8794744726_13,138,Muerta,7,16,-9,True,False,False,False,False,False,False,True,False,False,False,False
+8794744726,14,2,pick,dire,5017210.0,8261500.0,8794744726_14,112,Winter Wyvern,105,74,31,False,False,False,False,False,False,False,False,False,False,False,False
+8794744726,15,2,pick,dire,5017210.0,8261500.0,8794744726_15,145,Kez,14,12,2,False,False,False,False,False,False,False,False,False,False,False,False
+8794744726,16,2,pick,radiant,8261500.0,5017210.0,8794744726_16,87,Disruptor,7,4,3,True,True,False,True,False,False,False,False,True,False,False,False
+8794744726,17,3,pick,radiant,8261500.0,5017210.0,8794744726_17,36,Necrophos,106,110,-4,False,False,False,False,False,False,False,False,False,False,False,False
+8794744726,18,3,pick,dire,5017210.0,8261500.0,8794744726_18,16,Sand King,10,4,6,True,True,False,True,False,False,False,False,True,False,False,False
+8794744726,23,3,pick,dire,5017210.0,8261500.0,8794744726_23,51,Clockwerk,75,62,13,False,False,False,False,False,False,False,False,False,False,False,False
+8794744726,24,3,pick,radiant,8261500.0,5017210.0,8794744726_24,41,Faceless Void,6,4,2,True,True,False,True,False,False,False,False,True,False,False,False
+8794744726,8,1,pick,dire,5017210.0,8261500.0,8794744726_8,65,Batrider,3,2,1,True,True,True,True,True,True,False,False,False,False,False,False
+8794744726,9,2,pick,radiant,8261500.0,5017210.0,8794744726_9,120,Pangolier,2,3,-1,True,True,True,True,True,True,False,False,False,False,False,False
+8795920439,13,2,pick,dire,726228.0,8261500.0,8795920439_13,138,Muerta,15,4,11,False,True,False,True,False,False,True,False,True,False,False,False
+8795920439,14,2,pick,radiant,8261500.0,726228.0,8795920439_14,75,Silencer,42,43,-1,False,False,False,False,False,False,False,False,False,False,False,False
+8795920439,15,2,pick,radiant,8261500.0,726228.0,8795920439_15,123,Hoodwink,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8795920439,16,2,pick,dire,726228.0,8261500.0,8795920439_16,112,Winter Wyvern,83,42,41,False,False,False,False,False,False,False,False,False,False,False,False
+8795920439,17,3,pick,dire,726228.0,8261500.0,8795920439_17,145,Kez,52,63,-11,False,False,False,False,False,False,False,False,False,False,False,False
+8795920439,18,3,pick,radiant,8261500.0,726228.0,8795920439_18,34,Tinker,33,64,-31,False,False,False,False,False,False,False,False,False,False,False,False
+8795920439,23,3,pick,radiant,8261500.0,726228.0,8795920439_23,19,Tiny,7,8,-1,True,True,False,False,False,False,False,False,False,False,False,False
+8795920439,24,3,pick,dire,726228.0,8261500.0,8795920439_24,108,Underlord,7,4,3,True,True,False,True,False,False,False,False,True,False,False,False
+8795920439,8,1,pick,radiant,8261500.0,726228.0,8795920439_8,120,Pangolier,4,5,-1,True,True,True,True,False,False,False,False,False,False,False,False
+8795920439,9,2,pick,dire,726228.0,8261500.0,8795920439_9,39,Queen of Pain,10,8,2,True,True,False,False,False,False,False,False,False,False,False,False
+8796002560,13,2,pick,dire,8261500.0,726228.0,8796002560_13,138,Muerta,9,12,-3,True,False,False,False,False,False,False,True,False,False,False,False
+8796002560,14,2,pick,radiant,726228.0,8261500.0,8796002560_14,83,Treant Protector,13,11,2,False,False,False,False,False,False,False,False,False,False,False,False
+8796002560,15,2,pick,radiant,726228.0,8261500.0,8796002560_15,21,Windranger,18,10,8,False,True,False,False,False,False,True,False,False,False,False,False
+8796002560,16,2,pick,dire,8261500.0,726228.0,8796002560_16,90,Keeper of the Light,24,19,5,False,False,False,False,False,False,False,False,False,False,False,False
+8796002560,17,3,pick,dire,8261500.0,726228.0,8796002560_17,51,Clockwerk,31,32,-1,False,False,False,False,False,False,False,False,False,False,False,False
+8796002560,18,3,pick,radiant,726228.0,8261500.0,8796002560_18,106,Ember Spirit,2,1,1,True,True,True,True,True,True,False,False,False,False,False,False
+8796002560,23,3,pick,radiant,726228.0,8261500.0,8796002560_23,16,Sand King,8,7,1,True,True,False,False,False,False,False,False,False,False,False,False
+8796002560,24,3,pick,dire,8261500.0,726228.0,8796002560_24,29,Tidehunter,4,1,3,True,True,True,True,False,True,False,False,False,False,True,False
+8796002560,8,1,pick,radiant,726228.0,8261500.0,8796002560_8,86,Rubick,2,1,1,True,True,True,True,True,True,False,False,False,False,False,False
+8796002560,9,2,pick,dire,8261500.0,726228.0,8796002560_9,120,Pangolier,1,2,-1,True,True,True,True,True,True,False,False,False,False,False,False
+8796079102,13,2,pick,radiant,726228.0,8261500.0,8796079102_13,40,Venomancer,23,22,1,False,False,False,False,False,False,False,False,False,False,False,False
+8796079102,14,2,pick,dire,8261500.0,726228.0,8796079102_14,123,Hoodwink,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8796079102,15,2,pick,dire,8261500.0,726228.0,8796079102_15,111,Oracle,37,20,17,False,False,False,False,False,False,False,False,False,False,False,False
+8796079102,16,2,pick,radiant,726228.0,8261500.0,8796079102_16,120,Pangolier,6,5,1,True,True,False,True,False,False,False,False,True,False,False,False
+8796079102,17,3,pick,radiant,726228.0,8261500.0,8796079102_17,145,Kez,48,20,28,False,False,False,False,False,False,False,False,False,False,False,False
+8796079102,18,3,pick,dire,8261500.0,726228.0,8796079102_18,63,Weaver,1,2,-1,True,True,True,True,True,True,False,False,False,False,False,False
+8796079102,23,3,pick,dire,8261500.0,726228.0,8796079102_23,137,Primal Beast,33,19,14,False,False,False,False,False,False,False,False,False,False,False,False
+8796079102,24,3,pick,radiant,726228.0,8261500.0,8796079102_24,17,Storm Spirit,8,1,7,True,True,False,True,False,True,False,False,True,False,True,False
+8796079102,8,1,pick,dire,8261500.0,726228.0,8796079102_8,28,Slardar,1,3,-2,True,True,True,True,True,True,False,False,False,False,False,False
+8796079102,9,2,pick,radiant,726228.0,8261500.0,8796079102_9,65,Batrider,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8796840419,13,2,pick,radiant,2576071.0,9338413.0,8796840419_13,120,Pangolier,11,10,1,False,True,False,False,False,False,True,False,False,False,False,False
+8796840419,14,2,pick,dire,9338413.0,2576071.0,8796840419_14,58,Enchantress,7,6,1,True,True,False,False,False,False,False,False,False,False,False,False
+8796840419,15,2,pick,dire,9338413.0,2576071.0,8796840419_15,121,Grimstroke,3,5,-2,True,True,True,True,True,False,False,False,False,False,False,True
+8796840419,16,2,pick,radiant,2576071.0,9338413.0,8796840419_16,19,Tiny,33,43,-10,False,False,False,False,False,False,False,False,False,False,False,False
+8796840419,17,3,pick,radiant,2576071.0,9338413.0,8796840419_17,31,Lich,42,20,22,False,False,False,False,False,False,False,False,False,False,False,False
+8796840419,18,3,pick,dire,9338413.0,2576071.0,8796840419_18,106,Ember Spirit,4,3,1,True,True,True,True,False,True,False,False,False,False,True,False
+8796840419,23,3,pick,dire,9338413.0,2576071.0,8796840419_23,16,Sand King,2,8,-6,True,True,True,False,True,False,False,False,False,True,False,True
+8796840419,24,3,pick,radiant,2576071.0,9338413.0,8796840419_24,29,Tidehunter,1,5,-4,True,True,True,True,True,False,False,False,False,False,False,True
+8796840419,8,1,pick,dire,9338413.0,2576071.0,8796840419_8,73,Alchemist,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8796840419,9,2,pick,radiant,2576071.0,9338413.0,8796840419_9,65,Batrider,3,1,2,True,True,True,True,True,True,False,False,False,False,False,False
+8796923918,13,2,pick,dire,9338413.0,2576071.0,8796923918_13,123,Hoodwink,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8796923918,14,2,pick,radiant,2576071.0,9338413.0,8796923918_14,138,Muerta,7,6,1,True,True,False,False,False,False,False,False,False,False,False,False
+8796923918,15,2,pick,radiant,2576071.0,9338413.0,8796923918_15,131,Ringmaster,1,2,-1,True,True,True,True,True,True,False,False,False,False,False,False
+8796923918,16,2,pick,dire,9338413.0,2576071.0,8796923918_16,145,Kez,71,37,34,False,False,False,False,False,False,False,False,False,False,False,False
+8796923918,17,3,pick,dire,9338413.0,2576071.0,8796923918_17,108,Underlord,33,17,16,False,False,False,False,False,False,False,False,False,False,False,False
+8796923918,18,3,pick,radiant,2576071.0,9338413.0,8796923918_18,59,Huskar,7,8,-1,True,True,False,False,False,False,False,False,False,False,False,False
+8796923918,23,3,pick,radiant,2576071.0,9338413.0,8796923918_23,19,Tiny,8,36,-28,True,False,False,False,False,False,False,True,False,False,False,False
+8796923918,24,3,pick,dire,9338413.0,2576071.0,8796923918_24,36,Necrophos,95,65,30,False,False,False,False,False,False,False,False,False,False,False,False
+8796923918,8,1,pick,radiant,2576071.0,9338413.0,8796923918_8,120,Pangolier,5,6,-1,True,True,True,False,False,False,False,False,False,True,False,False
+8796923918,9,2,pick,dire,9338413.0,2576071.0,8796923918_9,110,Phoenix,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8797005855,13,2,pick,radiant,2576071.0,9338413.0,8797005855_13,73,Alchemist,3,3,0,True,True,True,True,True,True,False,False,False,False,False,False
+8797005855,14,2,pick,dire,9338413.0,2576071.0,8797005855_14,123,Hoodwink,2,2,0,True,True,True,True,True,True,False,False,False,False,False,False
+8797005855,15,2,pick,dire,9338413.0,2576071.0,8797005855_15,110,Phoenix,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8797005855,16,2,pick,radiant,2576071.0,9338413.0,8797005855_16,137,Primal Beast,54,40,14,False,False,False,False,False,False,False,False,False,False,False,False
+8797005855,17,3,pick,radiant,2576071.0,9338413.0,8797005855_17,131,Ringmaster,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8797005855,18,3,pick,dire,9338413.0,2576071.0,8797005855_18,36,Necrophos,28,42,-14,False,False,False,False,False,False,False,False,False,False,False,False
+8797005855,23,3,pick,dire,9338413.0,2576071.0,8797005855_23,145,Kez,10,1,9,True,True,False,True,False,True,False,False,True,False,True,False
+8797005855,24,3,pick,radiant,2576071.0,9338413.0,8797005855_24,90,Keeper of the Light,40,37,3,False,False,False,False,False,False,False,False,False,False,False,False
+8797005855,8,1,pick,dire,9338413.0,2576071.0,8797005855_8,120,Pangolier,5,4,1,True,True,True,True,False,False,False,False,False,False,False,False
+8797005855,9,2,pick,radiant,2576071.0,9338413.0,8797005855_9,51,Clockwerk,49,82,-33,False,False,False,False,False,False,False,False,False,False,False,False
+8797699775,13,2,pick,dire,9338413.0,5014799.0,8797699775_13,51,Clockwerk,5,3,2,True,True,True,True,False,True,False,False,False,False,True,False
+8797699775,14,2,pick,radiant,5014799.0,9338413.0,8797699775_14,86,Rubick,2,2,0,True,True,True,True,True,True,False,False,False,False,False,False
+8797699775,15,2,pick,radiant,5014799.0,9338413.0,8797699775_15,108,Underlord,21,36,-15,False,False,False,False,False,False,False,False,False,False,False,False
+8797699775,16,2,pick,dire,9338413.0,5014799.0,8797699775_16,27,Shadow Shaman,89,48,41,False,False,False,False,False,False,False,False,False,False,False,False
+8797699775,17,3,pick,dire,9338413.0,5014799.0,8797699775_17,47,Viper,26,22,4,False,False,False,False,False,False,False,False,False,False,False,False
+8797699775,18,3,pick,radiant,5014799.0,9338413.0,8797699775_18,39,Queen of Pain,7,11,-4,True,False,False,False,False,False,False,True,False,False,False,False
+8797699775,23,3,pick,radiant,5014799.0,9338413.0,8797699775_23,64,Jakiro,23,1,22,False,True,False,True,False,True,True,False,True,False,True,False
+8797699775,24,3,pick,dire,9338413.0,5014799.0,8797699775_24,126,Void Spirit,19,16,3,False,False,False,False,False,False,False,False,False,False,False,False
+8797699775,8,1,pick,radiant,5014799.0,9338413.0,8797699775_8,114,Monkey King,3,3,0,True,True,True,True,True,True,False,False,False,False,False,False
+8797699775,9,2,pick,dire,9338413.0,5014799.0,8797699775_9,80,Lone Druid,2,4,-2,True,True,True,True,True,False,False,False,False,False,False,True
+8797782323,13,2,pick,radiant,5014799.0,9338413.0,8797782323_13,40,Venomancer,7,6,1,True,True,False,False,False,False,False,False,False,False,False,False
+8797782323,14,2,pick,dire,9338413.0,5014799.0,8797782323_14,38,Beastmaster,14,13,1,False,False,False,False,False,False,False,False,False,False,False,False
+8797782323,15,2,pick,dire,9338413.0,5014799.0,8797782323_15,123,Hoodwink,1,2,-1,True,True,True,True,True,True,False,False,False,False,False,False
+8797782323,16,2,pick,radiant,5014799.0,9338413.0,8797782323_16,23,Kunkka,6,11,-5,True,False,False,False,False,False,False,True,False,False,False,False
+8797782323,17,3,pick,radiant,5014799.0,9338413.0,8797782323_17,22,Zeus,81,55,26,False,False,False,False,False,False,False,False,False,False,False,False
+8797782323,18,3,pick,dire,9338413.0,5014799.0,8797782323_18,78,Brewmaster,17,37,-20,False,False,False,False,False,False,False,False,False,False,False,False
+8797782323,23,3,pick,dire,9338413.0,5014799.0,8797782323_23,86,Rubick,25,22,3,False,False,False,False,False,False,False,False,False,False,False,False
+8797782323,24,3,pick,radiant,5014799.0,9338413.0,8797782323_24,138,Muerta,7,2,5,True,True,False,True,False,True,False,False,True,False,True,False
+8797782323,8,1,pick,dire,9338413.0,5014799.0,8797782323_8,73,Alchemist,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8797782323,9,2,pick,radiant,5014799.0,9338413.0,8797782323_9,69,Doom,9,8,1,True,True,False,False,False,False,False,False,False,False,False,False
+8799205642,13,2,pick,radiant,9255039.0,9338413.0,8799205642_13,123,Hoodwink,3,4,-1,True,True,True,True,True,False,False,False,False,False,False,True
+8799205642,14,2,pick,dire,9338413.0,9255039.0,8799205642_14,51,Clockwerk,6,4,2,True,True,False,True,False,False,False,False,True,False,False,False
+8799205642,15,2,pick,dire,9338413.0,9255039.0,8799205642_15,110,Phoenix,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8799205642,16,2,pick,radiant,9255039.0,9338413.0,8799205642_16,145,Kez,40,59,-19,False,False,False,False,False,False,False,False,False,False,False,False
+8799205642,17,3,pick,radiant,9255039.0,9338413.0,8799205642_17,40,Venomancer,4,1,3,True,True,True,True,False,True,False,False,False,False,True,False
+8799205642,18,3,pick,dire,9338413.0,9255039.0,8799205642_18,39,Queen of Pain,15,11,4,False,False,False,False,False,False,False,False,False,False,False,False
+8799205642,23,3,pick,dire,9338413.0,9255039.0,8799205642_23,137,Primal Beast,32,13,19,False,False,False,False,False,False,False,False,False,False,False,False
+8799205642,24,3,pick,radiant,9255039.0,9338413.0,8799205642_24,106,Ember Spirit,4,3,1,True,True,True,True,False,True,False,False,False,False,True,False
+8799205642,8,1,pick,dire,9338413.0,9255039.0,8799205642_8,73,Alchemist,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8799205642,9,2,pick,radiant,9255039.0,9338413.0,8799205642_9,99,Bristleback,6,6,0,True,True,False,False,False,False,False,False,False,False,False,False
+8799274239,13,2,pick,dire,9338413.0,9255039.0,8799274239_13,120,Pangolier,6,3,3,True,True,False,True,False,True,False,False,True,False,True,False
+8799274239,14,2,pick,radiant,9255039.0,9338413.0,8799274239_14,90,Keeper of the Light,25,14,11,False,False,False,False,False,False,False,False,False,False,False,False
+8799274239,15,2,pick,radiant,9255039.0,9338413.0,8799274239_15,40,Venomancer,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8799274239,16,2,pick,dire,9338413.0,9255039.0,8799274239_16,19,Tiny,24,17,7,False,False,False,False,False,False,False,False,False,False,False,False
+8799274239,17,3,pick,dire,9338413.0,9255039.0,8799274239_17,110,Phoenix,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8799274239,18,3,pick,radiant,9255039.0,9338413.0,8799274239_18,145,Kez,11,4,7,False,True,False,True,False,False,True,False,True,False,False,False
+8799274239,23,3,pick,radiant,9255039.0,9338413.0,8799274239_23,13,Puck,8,12,-4,True,False,False,False,False,False,False,True,False,False,False,False
+8799274239,24,3,pick,dire,9338413.0,9255039.0,8799274239_24,126,Void Spirit,5,26,-21,True,False,True,False,False,False,False,True,False,True,False,False
+8799274239,8,1,pick,radiant,9255039.0,9338413.0,8799274239_8,38,Beastmaster,11,10,1,False,True,False,False,False,False,True,False,False,False,False,False
+8799274239,9,2,pick,dire,9338413.0,9255039.0,8799274239_9,123,Hoodwink,6,7,-1,True,True,False,False,False,False,False,False,False,False,False,False
+8800392534,13,2,pick,radiant,10020555.0,9338413.0,8800392534_13,86,Rubick,1,2,-1,True,True,True,True,True,True,False,False,False,False,False,False
+8800392534,14,2,pick,dire,9338413.0,10020555.0,8800392534_14,69,Doom,8,4,4,True,True,False,True,False,False,False,False,True,False,False,False
+8800392534,15,2,pick,dire,9338413.0,10020555.0,8800392534_15,40,Venomancer,2,2,0,True,True,True,True,True,True,False,False,False,False,False,False
+8800392534,16,2,pick,radiant,10020555.0,9338413.0,8800392534_16,108,Underlord,24,7,17,False,True,False,False,False,False,True,False,False,False,False,False
+8800392534,17,3,pick,radiant,10020555.0,9338413.0,8800392534_17,138,Muerta,18,2,16,False,True,False,True,False,True,True,False,True,False,True,False
+8800392534,18,3,pick,dire,9338413.0,10020555.0,8800392534_18,59,Huskar,19,10,9,False,True,False,False,False,False,True,False,False,False,False,False
+8800392534,23,3,pick,dire,9338413.0,10020555.0,8800392534_23,106,Ember Spirit,2,46,-44,True,False,True,False,True,False,False,True,False,True,False,True
+8800392534,24,3,pick,radiant,10020555.0,9338413.0,8800392534_24,43,Death Prophet,20,32,-12,False,False,False,False,False,False,False,False,False,False,False,False
+8800392534,8,1,pick,dire,9338413.0,10020555.0,8800392534_8,123,Hoodwink,7,6,1,True,True,False,False,False,False,False,False,False,False,False,False
+8800392534,9,2,pick,radiant,10020555.0,9338413.0,8800392534_9,65,Batrider,2,2,0,True,True,True,True,True,True,False,False,False,False,False,False
+8800459074,13,2,pick,dire,9338413.0,10020555.0,8800459074_13,38,Beastmaster,7,6,1,True,True,False,False,False,False,False,False,False,False,False,False
+8800459074,14,2,pick,radiant,10020555.0,9338413.0,8800459074_14,58,Enchantress,8,13,-5,True,False,False,False,False,False,False,True,False,False,False,False
+8800459074,15,2,pick,radiant,10020555.0,9338413.0,8800459074_15,100,Tusk,7,25,-18,True,False,False,False,False,False,False,True,False,False,False,False
+8800459074,16,2,pick,dire,9338413.0,10020555.0,8800459074_16,51,Clockwerk,3,1,2,True,True,True,True,True,True,False,False,False,False,False,False
+8800459074,17,3,pick,dire,9338413.0,10020555.0,8800459074_17,105,Techies,36,23,13,False,False,False,False,False,False,False,False,False,False,False,False
+8800459074,18,3,pick,radiant,10020555.0,9338413.0,8800459074_18,114,Monkey King,8,2,6,True,True,False,True,False,True,False,False,True,False,True,False
+8800459074,23,3,pick,radiant,10020555.0,9338413.0,8800459074_23,17,Storm Spirit,7,9,-2,True,True,False,False,False,False,False,False,False,False,False,False
+8800459074,24,3,pick,dire,9338413.0,10020555.0,8800459074_24,110,Phoenix,11,16,-5,False,False,False,False,False,False,False,False,False,False,False,False
+8800459074,8,1,pick,radiant,10020555.0,9338413.0,8800459074_8,65,Batrider,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8800459074,9,2,pick,dire,9338413.0,10020555.0,8800459074_9,73,Alchemist,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8800536923,13,2,pick,dire,9338413.0,10020555.0,8800536923_13,110,Phoenix,2,1,1,True,True,True,True,True,True,False,False,False,False,False,False
+8800536923,14,2,pick,radiant,10020555.0,9338413.0,8800536923_14,58,Enchantress,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8800536923,15,2,pick,radiant,10020555.0,9338413.0,8800536923_15,100,Tusk,4,3,1,True,True,True,True,False,True,False,False,False,False,True,False
+8800536923,16,2,pick,dire,9338413.0,10020555.0,8800536923_16,78,Brewmaster,12,15,-3,False,False,False,False,False,False,False,False,False,False,False,False
+8800536923,17,3,pick,dire,9338413.0,10020555.0,8800536923_17,131,Ringmaster,19,12,7,False,False,False,False,False,False,False,False,False,False,False,False
+8800536923,18,3,pick,radiant,10020555.0,9338413.0,8800536923_18,33,Enigma,20,10,10,False,True,False,False,False,False,True,False,False,False,False,False
+8800536923,23,3,pick,radiant,10020555.0,9338413.0,8800536923_23,106,Ember Spirit,3,1,2,True,True,True,True,True,True,False,False,False,False,False,False
+8800536923,24,3,pick,dire,9338413.0,10020555.0,8800536923_24,72,Gyrocopter,45,17,28,False,False,False,False,False,False,False,False,False,False,False,False
+8800536923,8,1,pick,radiant,10020555.0,9338413.0,8800536923_8,114,Monkey King,2,2,0,True,True,True,True,True,True,False,False,False,False,False,False
+8800536923,9,2,pick,dire,9338413.0,10020555.0,8800536923_9,59,Huskar,15,15,0,False,False,False,False,False,False,False,False,False,False,False,False
+8801558188,13,2,pick,radiant,9338413.0,9303383.0,8801558188_13,28,Slardar,2,1,1,True,True,True,True,True,True,False,False,False,False,False,False
+8801558188,14,2,pick,dire,9303383.0,9338413.0,8801558188_14,40,Venomancer,7,8,-1,True,True,False,False,False,False,False,False,False,False,False,False
+8801558188,15,2,pick,dire,9303383.0,9338413.0,8801558188_15,21,Windranger,53,45,8,False,False,False,False,False,False,False,False,False,False,False,False
+8801558188,16,2,pick,radiant,9338413.0,9303383.0,8801558188_16,11,Shadow Fiend,69,68,1,False,False,False,False,False,False,False,False,False,False,False,False
+8801558188,17,3,pick,radiant,9338413.0,9303383.0,8801558188_17,105,Techies,40,13,27,False,False,False,False,False,False,False,False,False,False,False,False
+8801558188,18,3,pick,dire,9303383.0,9338413.0,8801558188_18,2,Axe,42,29,13,False,False,False,False,False,False,False,False,False,False,False,False
+8801558188,23,3,pick,dire,9303383.0,9338413.0,8801558188_23,13,Puck,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8801558188,24,3,pick,radiant,9338413.0,9303383.0,8801558188_24,126,Void Spirit,8,4,4,True,True,False,True,False,False,False,False,True,False,False,False
+8801558188,8,1,pick,dire,9303383.0,9338413.0,8801558188_8,123,Hoodwink,6,5,1,True,True,False,True,False,False,False,False,True,False,False,False
+8801558188,9,2,pick,radiant,9338413.0,9303383.0,8801558188_9,83,Treant Protector,26,32,-6,False,False,False,False,False,False,False,False,False,False,False,False
+8801689041,13,2,pick,radiant,9338413.0,9303383.0,8801689041_13,90,Keeper of the Light,29,27,2,False,False,False,False,False,False,False,False,False,False,False,False
+8801689041,14,2,pick,dire,9303383.0,9338413.0,8801689041_14,17,Storm Spirit,17,17,0,False,False,False,False,False,False,False,False,False,False,False,False
+8801689041,15,2,pick,dire,9303383.0,9338413.0,8801689041_15,111,Oracle,59,33,26,False,False,False,False,False,False,False,False,False,False,False,False
+8801689041,16,2,pick,radiant,9338413.0,9303383.0,8801689041_16,106,Ember Spirit,8,6,2,True,True,False,False,False,False,False,False,False,False,False,False
+8801689041,17,3,pick,radiant,9338413.0,9303383.0,8801689041_17,77,Lycan,86,71,15,False,False,False,False,False,False,False,False,False,False,False,False
+8801689041,18,3,pick,dire,9303383.0,9338413.0,8801689041_18,61,Broodmother,17,10,7,False,True,False,False,False,False,True,False,False,False,False,False
+8801689041,23,3,pick,dire,9303383.0,9338413.0,8801689041_23,155,Largo,18,13,5,False,False,False,False,False,False,False,False,False,False,False,False
+8801689041,24,3,pick,radiant,9338413.0,9303383.0,8801689041_24,49,Dragon Knight,8,3,5,True,True,False,True,False,True,False,False,True,False,True,False
+8801689041,8,1,pick,dire,9303383.0,9338413.0,8801689041_8,123,Hoodwink,5,5,0,True,True,True,True,False,False,False,False,False,False,False,False
+8801689041,9,2,pick,radiant,9338413.0,9303383.0,8801689041_9,40,Venomancer,10,11,-1,True,False,False,False,False,False,False,True,False,False,False,False
+8801752449,13,2,pick,radiant,9338413.0,9303383.0,8801752449_13,90,Keeper of the Light,13,9,4,False,True,False,False,False,False,True,False,False,False,False,False
+8801752449,14,2,pick,dire,9303383.0,9338413.0,8801752449_14,105,Techies,37,23,14,False,False,False,False,False,False,False,False,False,False,False,False
+8801752449,15,2,pick,dire,9303383.0,9338413.0,8801752449_15,58,Enchantress,12,9,3,False,True,False,False,False,False,True,False,False,False,False,False
+8801752449,16,2,pick,radiant,9338413.0,9303383.0,8801752449_16,27,Shadow Shaman,20,15,5,False,False,False,False,False,False,False,False,False,False,False,False
+8801752449,17,3,pick,radiant,9338413.0,9303383.0,8801752449_17,108,Underlord,28,11,17,False,False,False,False,False,False,False,False,False,False,False,False
+8801752449,18,3,pick,dire,9303383.0,9338413.0,8801752449_18,54,Lifestealer,7,5,2,True,True,False,True,False,False,False,False,True,False,False,False
+8801752449,23,3,pick,dire,9303383.0,9338413.0,8801752449_23,29,Tidehunter,3,2,1,True,True,True,True,True,True,False,False,False,False,False,False
+8801752449,24,3,pick,radiant,9338413.0,9303383.0,8801752449_24,11,Shadow Fiend,28,27,1,False,False,False,False,False,False,False,False,False,False,False,False
+8801752449,8,1,pick,dire,9303383.0,9338413.0,8801752449_8,13,Puck,3,3,0,True,True,True,True,True,True,False,False,False,False,False,False
+8801752449,9,2,pick,radiant,9338413.0,9303383.0,8801752449_9,106,Ember Spirit,16,12,4,False,False,False,False,False,False,False,False,False,False,False,False
+8802755227,13,2,pick,dire,8291895.0,9255039.0,8802755227_13,105,Techies,53,55,-2,False,False,False,False,False,False,False,False,False,False,False,False
+8802755227,14,2,pick,radiant,9255039.0,8291895.0,8802755227_14,86,Rubick,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8802755227,15,2,pick,radiant,9255039.0,8291895.0,8802755227_15,45,Pugna,5,2,3,True,True,True,True,False,True,False,False,False,False,True,False
+8802755227,16,2,pick,dire,8291895.0,9255039.0,8802755227_16,90,Keeper of the Light,23,11,12,False,False,False,False,False,False,False,False,False,False,False,False
+8802755227,17,3,pick,dire,8291895.0,9255039.0,8802755227_17,17,Storm Spirit,18,27,-9,False,False,False,False,False,False,False,False,False,False,False,False
+8802755227,18,3,pick,radiant,9255039.0,8291895.0,8802755227_18,108,Underlord,3,4,-1,True,True,True,True,True,False,False,False,False,False,False,True
+8802755227,23,3,pick,radiant,9255039.0,8291895.0,8802755227_23,106,Ember Spirit,2,1,1,True,True,True,True,True,True,False,False,False,False,False,False
+8802755227,24,3,pick,dire,8291895.0,9255039.0,8802755227_24,70,Ursa,25,5,20,False,True,False,True,False,False,True,False,True,False,False,False
+8802755227,8,1,pick,radiant,9255039.0,8291895.0,8802755227_8,80,Lone Druid,9,13,-4,True,False,False,False,False,False,False,True,False,False,False,False
+8802755227,9,2,pick,dire,8291895.0,9255039.0,8802755227_9,98,Timbersaw,21,16,5,False,False,False,False,False,False,False,False,False,False,False,False
+8802892505,13,2,pick,radiant,8291895.0,9255039.0,8802892505_13,86,Rubick,3,11,-8,True,False,True,False,True,False,False,True,False,True,False,True
+8802892505,14,2,pick,dire,9255039.0,8291895.0,8802892505_14,58,Enchantress,13,13,0,False,False,False,False,False,False,False,False,False,False,False,False
+8802892505,15,2,pick,dire,9255039.0,8291895.0,8802892505_15,99,Bristleback,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8802892505,16,2,pick,radiant,8291895.0,9255039.0,8802892505_16,155,Largo,5,8,-3,True,True,True,False,False,False,False,False,False,True,False,False
+8802892505,17,3,pick,radiant,8291895.0,9255039.0,8802892505_17,138,Muerta,9,7,2,True,True,False,False,False,False,False,False,False,False,False,False
+8802892505,18,3,pick,dire,9255039.0,8291895.0,8802892505_18,54,Lifestealer,8,5,3,True,True,False,True,False,False,False,False,True,False,False,False
+8802892505,23,3,pick,dire,9255039.0,8291895.0,8802892505_23,39,Queen of Pain,4,2,2,True,True,True,True,False,True,False,False,False,False,True,False
+8802892505,24,3,pick,radiant,8291895.0,9255039.0,8802892505_24,43,Death Prophet,85,48,37,False,False,False,False,False,False,False,False,False,False,False,False
+8802892505,8,1,pick,dire,9255039.0,8291895.0,8802892505_8,123,Hoodwink,8,8,0,True,True,False,False,False,False,False,False,False,False,False,False
+8802892505,9,2,pick,radiant,8291895.0,9255039.0,8802892505_9,105,Techies,26,29,-3,False,False,False,False,False,False,False,False,False,False,False,False
+8802982182,13,2,pick,dire,8291895.0,9255039.0,8802982182_13,110,Phoenix,2,1,1,True,True,True,True,True,True,False,False,False,False,False,False
+8802982182,14,2,pick,radiant,9255039.0,8291895.0,8802982182_14,87,Disruptor,29,25,4,False,False,False,False,False,False,False,False,False,False,False,False
+8802982182,15,2,pick,radiant,9255039.0,8291895.0,8802982182_15,99,Bristleback,5,1,4,True,True,True,True,False,True,False,False,False,False,True,False
+8802982182,16,2,pick,dire,8291895.0,9255039.0,8802982182_16,19,Tiny,14,10,4,False,True,False,False,False,False,True,False,False,False,False,False
+8802982182,17,3,pick,dire,8291895.0,9255039.0,8802982182_17,77,Lycan,73,28,45,False,False,False,False,False,False,False,False,False,False,False,False
+8802982182,18,3,pick,radiant,9255039.0,8291895.0,8802982182_18,13,Puck,1,2,-1,True,True,True,True,True,True,False,False,False,False,False,False
+8802982182,23,3,pick,radiant,9255039.0,8291895.0,8802982182_23,108,Underlord,1,3,-2,True,True,True,True,True,True,False,False,False,False,False,False
+8802982182,24,3,pick,dire,8291895.0,9255039.0,8802982182_24,59,Huskar,36,11,25,False,False,False,False,False,False,False,False,False,False,False,False
+8802982182,8,1,pick,radiant,9255039.0,8291895.0,8802982182_8,86,Rubick,3,3,0,True,True,True,True,True,True,False,False,False,False,False,False
+8802982182,9,2,pick,dire,8291895.0,9255039.0,8802982182_9,65,Batrider,4,5,-1,True,True,True,True,False,False,False,False,False,False,False,False
+8803088532,13,2,pick,dire,9303383.0,9572001.0,8803088532_13,16,Sand King,12,16,-4,False,False,False,False,False,False,False,False,False,False,False,False
+8803088532,14,2,pick,radiant,9572001.0,9303383.0,8803088532_14,19,Tiny,32,46,-14,False,False,False,False,False,False,False,False,False,False,False,False
+8803088532,15,2,pick,radiant,9572001.0,9303383.0,8803088532_15,128,Snapfire,88,67,21,False,False,False,False,False,False,False,False,False,False,False,False
+8803088532,16,2,pick,dire,9303383.0,9572001.0,8803088532_16,131,Ringmaster,6,11,-5,True,False,False,False,False,False,False,True,False,False,False,False
+8803088532,17,3,pick,dire,9303383.0,9572001.0,8803088532_17,114,Monkey King,15,14,1,False,False,False,False,False,False,False,False,False,False,False,False
+8803088532,18,3,pick,radiant,9572001.0,9303383.0,8803088532_18,135,Dawnbreaker,58,32,26,False,False,False,False,False,False,False,False,False,False,False,False
+8803088532,23,3,pick,radiant,9572001.0,9303383.0,8803088532_23,39,Queen of Pain,9,7,2,True,True,False,False,False,False,False,False,False,False,False,False
+8803088532,24,3,pick,dire,9303383.0,9572001.0,8803088532_24,74,Invoker,26,54,-28,False,False,False,False,False,False,False,False,False,False,False,False
+8803088532,8,1,pick,radiant,9572001.0,9303383.0,8803088532_8,86,Rubick,2,1,1,True,True,True,True,True,True,False,False,False,False,False,False
+8803088532,9,2,pick,dire,9303383.0,9572001.0,8803088532_9,58,Enchantress,16,18,-2,False,False,False,False,False,False,False,False,False,False,False,False
+8803167635,13,2,pick,radiant,9303383.0,9572001.0,8803167635_13,51,Clockwerk,39,24,15,False,False,False,False,False,False,False,False,False,False,False,False
+8803167635,14,2,pick,dire,9572001.0,9303383.0,8803167635_14,59,Huskar,45,65,-20,False,False,False,False,False,False,False,False,False,False,False,False
+8803167635,15,2,pick,dire,9572001.0,9303383.0,8803167635_15,19,Tiny,19,39,-20,False,False,False,False,False,False,False,False,False,False,False,False
+8803167635,16,2,pick,radiant,9303383.0,9572001.0,8803167635_16,108,Underlord,9,7,2,True,True,False,False,False,False,False,False,False,False,False,False
+8803167635,17,3,pick,radiant,9303383.0,9572001.0,8803167635_17,110,Phoenix,1,4,-3,True,True,True,True,True,False,False,False,False,False,False,True
+8803167635,18,3,pick,dire,9572001.0,9303383.0,8803167635_18,39,Queen of Pain,12,76,-64,False,False,False,False,False,False,False,False,False,False,False,False
+8803167635,23,3,pick,dire,9572001.0,9303383.0,8803167635_23,66,Chen,20,2,18,False,True,False,True,False,True,True,False,True,False,True,False
+8803167635,24,3,pick,radiant,9303383.0,9572001.0,8803167635_24,106,Ember Spirit,1,1,0,True,True,True,True,True,True,False,False,False,False,False,False
+8803167635,8,1,pick,dire,9572001.0,9303383.0,8803167635_8,28,Slardar,3,4,-1,True,True,True,True,True,False,False,False,False,False,False,True
+8803167635,9,2,pick,radiant,9303383.0,9572001.0,8803167635_9,21,Windranger,24,23,1,False,False,False,False,False,False,False,False,False,False,False,False
+8803706352,13,2,pick,radiant,2576071.0,8291895.0,8803706352_13,74,Invoker,29,28,1,False,False,False,False,False,False,False,False,False,False,False,False
+8803706352,14,2,pick,dire,8291895.0,2576071.0,8803706352_14,86,Rubick,2,5,-3,True,True,True,True,True,False,False,False,False,False,False,True
+8803706352,15,2,pick,dire,8291895.0,2576071.0,8803706352_15,128,Snapfire,86,110,-24,False,False,False,False,False,False,False,False,False,False,False,False
+8803706352,16,2,pick,radiant,2576071.0,8291895.0,8803706352_16,77,Lycan,79,67,12,False,False,False,False,False,False,False,False,False,False,False,False
+8803706352,17,3,pick,radiant,2576071.0,8291895.0,8803706352_17,31,Lich,17,9,8,False,True,False,False,False,False,True,False,False,False,False,False
+8803706352,18,3,pick,dire,8291895.0,2576071.0,8803706352_18,108,Underlord,19,14,5,False,False,False,False,False,False,False,False,False,False,False,False
+8803706352,23,3,pick,dire,8291895.0,2576071.0,8803706352_23,82,Meepo,59,22,37,False,False,False,False,False,False,False,False,False,False,False,False
+8803706352,24,3,pick,radiant,2576071.0,8291895.0,8803706352_24,145,Kez,31,10,21,False,True,False,False,False,False,True,False,False,False,False,False
+8803706352,8,1,pick,dire,8291895.0,2576071.0,8803706352_8,51,Clockwerk,59,44,15,False,False,False,False,False,False,False,False,False,False,False,False
+8803706352,9,2,pick,radiant,2576071.0,8291895.0,8803706352_9,123,Hoodwink,3,4,-1,True,True,True,True,True,False,False,False,False,False,False,True
+8803798979,13,2,pick,radiant,8291895.0,2576071.0,8803798979_13,31,Lich,47,42,5,False,False,False,False,False,False,False,False,False,False,False,False
+8803798979,14,2,pick,dire,2576071.0,8291895.0,8803798979_14,48,Luna,8,14,-6,True,False,False,False,False,False,False,True,False,False,False,False
+8803798979,15,2,pick,dire,2576071.0,8291895.0,8803798979_15,112,Winter Wyvern,99,49,50,False,False,False,False,False,False,False,False,False,False,False,False
+8803798979,16,2,pick,radiant,8291895.0,2576071.0,8803798979_16,29,Tidehunter,12,12,0,False,False,False,False,False,False,False,False,False,False,False,False
+8803798979,17,3,pick,radiant,8291895.0,2576071.0,8803798979_17,86,Rubick,5,2,3,True,True,True,True,False,True,False,False,False,False,True,False
+8803798979,18,3,pick,dire,2576071.0,8291895.0,8803798979_18,34,Tinker,96,59,37,False,False,False,False,False,False,False,False,False,False,False,False
+8803798979,23,3,pick,dire,2576071.0,8291895.0,8803798979_23,23,Kunkka,10,8,2,True,True,False,False,False,False,False,False,False,False,False,False
+8803798979,24,3,pick,radiant,8291895.0,2576071.0,8803798979_24,73,Alchemist,5,8,-3,True,True,True,False,False,False,False,False,False,True,False,False
+8803798979,8,1,pick,dire,2576071.0,8291895.0,8803798979_8,65,Batrider,4,2,2,True,True,True,True,False,True,False,False,False,False,True,False
+8803798979,9,2,pick,radiant,8291895.0,2576071.0,8803798979_9,120,Pangolier,3,3,0,True,True,True,True,True,True,False,False,False,False,False,False
